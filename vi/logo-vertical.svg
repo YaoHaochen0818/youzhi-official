@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 400" width="280" height="400">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C9A96E"/>
+      <stop offset="50%" stop-color="#E8D5A3"/>
+      <stop offset="100%" stop-color="#C9A96E"/>
+    </linearGradient>
+    <linearGradient id="goldSubtle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A96E" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#E8D5A3" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C9A96E" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Decorative ring (top) -->
+  <circle cx="140" cy="90" r="64" fill="none" stroke="url(#gold)" stroke-width="1.2" opacity="0.45"/>
+  <circle cx="140" cy="90" r="50" fill="none" stroke="url(#gold)" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- 优炙 text (vertical) -->
+  <text x="140" y="220" font-family="'Noto Serif SC', 'SimSun', serif" font-size="110" font-weight="900" fill="url(#gold)" text-anchor="middle" letter-spacing="6">优炙</text>
+
+  <!-- YOUZHI -->
+  <text x="140" y="270" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#E8D5A3" text-anchor="middle" letter-spacing="20" font-style="italic">YOUZHI</text>
+
+  <!-- Decorative line -->
+  <line x1="75" y1="288" x2="205" y2="288" stroke="url(#goldSubtle)" stroke-width="0.5"/>
+
+  <!-- Tagline -->
+  <text x="140" y="318" font-family="'Noto Sans SC', sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="middle" letter-spacing="5">PREMIUM PET NUTRITION</text>
+
+  <!-- Small dot -->
+  <circle cx="140" cy="350" r="2" fill="#C9A96E" opacity="0.4"/>
+</svg>

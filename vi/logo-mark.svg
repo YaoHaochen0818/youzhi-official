@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C9A96E"/>
+      <stop offset="50%" stop-color="#E8D5A3"/>
+      <stop offset="100%" stop-color="#C9A96E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="120" cy="95" r="85" fill="none" stroke="url(#gold)" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="120" cy="95" r="72" fill="none" stroke="url(#gold)" stroke-width="0.7" opacity="0.3"/>
+  <circle cx="120" cy="95" r="58" fill="none" stroke="url(#gold)" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- 炙 character -->
+  <text x="120" y="118" font-family="'Noto Serif SC', 'SimSun', serif" font-size="76" font-weight="900" fill="url(#gold)" text-anchor="middle">炙</text>
+
+  <!-- Accent dot -->
+  <circle cx="120" cy="155" r="3" fill="#E8D5A3" opacity="0.8"/>
+
+  <!-- YOUZHI -->
+  <text x="120" y="200" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#E8D5A3" text-anchor="middle" letter-spacing="10" font-style="italic">YOUZHI</text>
+</svg>

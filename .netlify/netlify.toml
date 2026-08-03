@@ -1,0 +1,26 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "C:\\Users\\Microsoft\\Desktop\\优炙品牌资料库\\10_官网源文件"
+publishOrigin = "default"
+base = "C:\\Users\\Microsoft\\Desktop\\优炙品牌资料库\\10_官网源文件"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

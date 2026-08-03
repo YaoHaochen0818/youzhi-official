@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>猫咪喂养知识 — 优炙 YOUZHI</title>
+<meta name="description" content="猫咪喂养知识百科 — 换粮、软便、掉毛、幼猫护理、饮水、术后恢复等干货文章，优炙宠物营养实验室出品。">
+<meta property="og:title" content="优炙 YOUZHI | 猫咪喂养知识">
+<meta property="og:description" content="猫咪喂养干货 — 换粮指南 · 掉毛原因 · 幼猫护理 · 饮水攻略 · 术后恢复">
+<meta property="og:image" content="assets/logo.jpg">
+<link rel="icon" type="image/svg+xml" href="vi/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A96E; --gold-light: #E8D5A3; --gold-dim: rgba(201,169,110,0.10);
+  --bg: #08080C; --bg-card: #0E0E14; --border: rgba(255,255,255,0.06);
+  --text: #FFFFFF; --text-soft: rgba(255,255,255,0.55); --text-dim: rgba(255,255,255,0.30);
+  --font-sans: 'Noto Serif SC', serif; --font-serif: 'Noto Serif SC', serif;
+  --font-display: 'Cormorant Garamond', serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.9rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,12,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav .logo{font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:.06em}
+nav .logo .gold{color:var(--gold)}
+nav .links{display:flex;list-style:none;gap:2rem;align-items:center}
+nav .links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;transition:color .3s;font-weight:400}
+nav .links a:hover{color:#fff}
+
+.hero{padding:7rem 2rem 4rem;text-align:center;background:radial-gradient(ellipse at 50% 40%,rgba(201,169,110,.06),transparent 70%)}
+.hero .eyebrow{font-size:.56rem;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem}
+.hero h1{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700}
+.hero .gold{color:var(--gold)}
+.hero .sub{color:var(--text-soft);font-size:.85rem;margin-top:1rem}
+
+.container{max-width:1000px;margin:0 auto;padding:0 2rem 6rem}
+
+/* Article cards */
+.article-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-bottom:5rem}
+.article-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:2rem 2rem 1.8rem;text-decoration:none;color:inherit;transition:all .4s;display:flex;flex-direction:column}
+.article-card:hover{border-color:rgba(201,169,110,.22);transform:translateY(-4px)}
+.article-card .tag{font-size:.5rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:.8rem}
+.article-card h2{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;margin-bottom:.6rem;line-height:1.4}
+.article-card .desc{color:var(--text-soft);font-size:.75rem;line-height:1.8;flex:1}
+.article-card .read{font-size:.6rem;color:var(--gold);letter-spacing:.12em;margin-top:1.2rem;display:inline-flex;align-items:center;gap:.3rem;transition:gap .3s}
+.article-card:hover .read{gap:.6rem}
+
+/* Full article page */
+.article-page{display:none}
+.article-page.active{display:block}
+.article-page .back-btn{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);text-decoration:none;font-size:.68rem;letter-spacing:.1em;margin-bottom:2rem;cursor:pointer;border:none;background:none;font-family:var(--font-sans)}
+.article-page .back-btn:hover{color:#fff}
+.article-page article{max-width:750px;margin:0 auto}
+.article-page h2{font-family:var(--font-serif);font-size:2rem;font-weight:700;margin-bottom:1rem;line-height:1.3}
+.article-page .meta{font-size:.6rem;color:var(--text-dim);letter-spacing:.12em;margin-bottom:2.5rem}
+.article-page .body{color:var(--text-soft);font-size:.85rem;line-height:2.2}
+.article-page .body h3{font-family:var(--font-serif);color:#fff;font-size:1.2rem;font-weight:700;margin:2.5rem 0 1rem}
+.article-page .body strong{color:#fff;font-weight:600}
+.article-page .body ul,.article-page .body ol{padding-left:1.5rem;margin:1rem 0}
+.article-page .body li{margin-bottom:.5rem}
+.article-page .related{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+
+/* CTA */
+.cta-strip{text-align:center;padding:4rem 2rem;background:radial-gradient(ellipse at center,rgba(201,169,110,.04),transparent);border-top:1px solid var(--border)}
+.cta-strip h3{font-family:var(--font-serif);font-size:1.3rem;margin-bottom:1rem}
+.cta-strip p{color:var(--text-soft);font-size:.78rem;margin-bottom:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-decoration:none;border-radius:2px;transition:all .35s;font-family:var(--font-sans)}
+.btn-gold{background:var(--gold);color:#000;border:none}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,169,110,.18)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.14)}
+.btn-ghost:hover{border-color:rgba(255,255,255,.4);transform:translateY(-2px)}
+
+footer{padding:3rem 2.5rem;border-top:1px solid var(--border);text-align:center;color:var(--text-dim);font-size:.65rem}
+
+@media(max-width:768px){
+  .article-grid{grid-template-columns:1fr}
+  nav .links{display:none}
+  .hero{padding:5rem 1.2rem 3rem}
+  .container{padding:0 1.2rem 4rem}
+  .article-page .related{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">优<span class="gold">炙</span></a>
+  <ul class="links">
+    <li><a href="index.html">← 返回首页</a></li>
+    <li><a href="faq.html">帮助中心</a></li>
+    <li><a href="product.html">产品</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════ LIST VIEW ═══════ -->
+<div id="listView">
+  <section class="hero">
+    <div class="eyebrow">Cat Nutrition Lab</div>
+    <h1>猫咪喂养<span class="gold">知识百科</span></h1>
+    <p class="sub">优炙宠物营养实验室出品 — 科学养猫，从每一口开始。</p>
+  </section>
+
+  <div class="container">
+    <div class="article-grid">
+      <a href="#huanliang" class="article-card" onclick="showArticle('huanliang')">
+        <div class="tag">喂养指南</div>
+        <h2>猫咪换粮拉肚子怎么办？七天换粮法详解</h2>
+        <p class="desc">突然换粮是猫咪软便最常见的原因。学会正确的过渡节奏，猫咪肠胃更舒服。</p>
+        <span class="read">阅读全文 →</span>
+      </a>
+      <a href="#diaomao" class="article-card" onclick="showArticle('diaomao')">
+        <div class="tag">毛发护理</div>
+        <h2>猫咪掉毛严重什么原因？可能不是换季</h2>
+        <p class="desc">掉毛不只是季节性问题。营养缺乏、皮肤屏障受损都可能是幕后推手。</p>
+        <span class="read">阅读全文 →</span>
+      </a>
+      <a href="#youmao" class="article-card" onclick="showArticle('youmao')">
+        <div class="tag">幼猫护理</div>
+        <h2>幼猫什么时候可以吃湿粮？离乳期喂养全攻略</h2>
+        <p class="desc">4周龄开始，小猫可以尝试第一口湿粮。选对质地和配方，比选对时间更关键。</p>
+        <span class="read">阅读全文 →</span>
+      </a>
+      <a href="#heshui" class="article-card" onclick="showArticle('heshui')">
+        <div class="tag">日常保健</div>
+        <h2>猫咪不爱喝水怎么办？五个方法骗猫多喝水</h2>
+        <p class="desc">喝水少的猫，泌尿系统风险翻倍。湿粮是比饮水机更有效的补水策略。</p>
+        <span class="read">阅读全文 →</span>
+      </a>
+      <a href="#shuhou" class="article-card" onclick="showArticle('shuhou')">
+        <div class="tag">康复护理</div>
+        <h2>猫咪术后恢复吃什么？高蛋白滋补食材推荐</h2>
+        <p class="desc">手术后的猫需要高蛋白、易消化的营养支持。选对食材，恢复速度差一倍。</p>
+        <span class="read">阅读全文 →</span>
+      </a>
+      <a href="#lingtianjia" class="article-card" onclick="showArticle('lingtianjia')">
+        <div class="tag">成分科普</div>
+        <h2>猫罐头"零添加"是真的吗？如何看懂配料表</h2>
+        <p class="desc">诱食剂、防腐剂、胶质——配料表上不写的那些东西，你得学会自己判断。</p>
+        <span class="read">阅读全文 →</span>
+      </a>
+      <a href="#ganshi" class="article-card" onclick="showArticle('ganshi')">
+        <div class="tag">喂养指南</div>
+        <h2>干粮和湿粮怎么搭配？一张表看懂每日喂食方案</h2>
+        <p class="desc">干湿搭配不是拍脑袋决定的。猫咪的体重、年龄、活动量，都影响比例。</p>
+        <span class="read">阅读全文 →</span>
+      </a>
+      <a href="#xiaohua" class="article-card" onclick="showArticle('xiaohua')">
+        <div class="tag">肠胃健康</div>
+        <h2>猫的消化率是什么？为什么≥95%对肠胃猫很重要</h2>
+        <p class="desc">同样吃一罐，吸收率差20%意味着什么？消化率数据背后的真相。</p>
+        <span class="read">阅读全文 →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ ARTICLE PAGES ═══════ -->
+<div id="articleView" class="article-page" style="padding:7rem 2rem 4rem">
+  <div class="container">
+    <button class="back-btn" onclick="showList()">← 返回文章列表</button>
+    <article id="articleContent"></article>
+  </div>
+</div>
+
+<div class="cta-strip">
+  <h3>每篇文章都来自真实的猫咪喂养经验</h3>
+  <p>优炙宠物营养实验室 — 三重营养矩阵，重新定义精准猫粮标准。</p>
+  <a href="index.html" class="btn btn-gold">探索优炙产品</a>
+</div>
+
+<footer style="padding:3rem 2.5rem;border-top:1px solid var(--border);text-align:center">
+  <div style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;margin-bottom:.5rem">优<span style="color:var(--gold)">炙</span></div>
+  <div style="color:var(--text-dim);font-size:.65rem;margin-bottom:1.5rem">© 2026 YOUZHI. All rights reserved. — 猫咪喂养知识由优炙宠物营养实验室整理</div>
+  <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap">
+    <a href="index.html" style="color:var(--text-soft);text-decoration:none;font-size:.7rem;transition:color .3s">品牌首页</a>
+    <a href="product.html" style="color:var(--text-soft);text-decoration:none;font-size:.7rem;transition:color .3s">产品系列</a>
+    <a href="faq.html" style="color:var(--text-soft);text-decoration:none;font-size:.7rem;transition:color .3s">帮助中心</a>
+    <a href="vi/index.html" style="color:var(--text-soft);text-decoration:none;font-size:.7rem;transition:color .3s">品牌VI</a>
+  </div>
+</footer>
+
+<script>
+const articles = {
+  huanliang: {
+    title: '猫咪换粮拉肚子怎么办？七天换粮法详解',
+    tag: '喂养指南',
+    date: '2026年8月',
+    body: `
+<p>换粮期软便，大概是每个养猫人都经历过的焦虑。猫蹲在猫砂盆里半天，出来一看——稀的。这时候第一反应往往是"新粮有问题"。但其实，<strong>大多数换粮拉肚子不是因为新粮不好，而是因为换得太快</strong>。</p>
+
+<h3>为什么突然换粮会拉肚子</h3>
+<p>猫的肠胃菌群和消化酶系统，是<strong>适应它长期吃的食物</strong>的。当你突然换成一种蛋白质来源完全不同、脂肪含量不同的新粮，肠胃来不及调整酶的种类和菌群比例，就会出现短暂的功能性腹泻。</p>
+<p>这跟你突然从吃了三年的家常菜改成天天吃火锅是一样的——不是火锅不好，是你的肠胃没准备好。猫的消化系统对人的标准来说"娇气"，<strong>但对猫来说这恰恰是正常的设计</strong>——野外猫不会每天都吃同一种猎物，但在家养环境下，它们的食谱被人为固定了。</p>
+
+<h3>七天换粮法：最靠谱的过渡节奏</h3>
+<p>这不是"慢一点换就完了"，而是有一个明确的配比节奏：</p>
+<ul>
+  <li><strong>第1-2天</strong>：旧粮 75% + 新粮 25%。让肠胃"闻到"新食物的信号。</li>
+  <li><strong>第3-4天</strong>：旧粮 50% + 新粮 50%。肠胃开始正式分解新蛋白质。</li>
+  <li><strong>第5-6天</strong>：旧粮 25% + 新粮 75%。接近全换，观察便便状态。</li>
+  <li><strong>第7天</strong>：新粮 100%。如果前六天过渡顺利，第七天应该完全适应。</li>
+</ul>
+<p>注意：如果某一天便便开始变软，<strong>退回前一个比例维持2天</strong>，等便便恢复成型再继续推进。换粮不是赶进度——你的目标是猫咪舒服地完成过渡。</p>
+
+<h3>什么样的猫粮对肠胃最友好</h3>
+<p>如果你的猫本身就容易软便、肠胃敏感（比如布偶猫、无毛猫这类"玻璃胃"品种），选粮时关注这几点：</p>
+<ul>
+  <li><strong>单一肉源 > 混合肉源</strong>：鸡肉或金枪鱼单独作为蛋白质来源，比鸡+鱼+鸽大杂烩更容易消化。每种肉的蛋白结构不同，单一肉源减轻肠胃分类处理的负担。</li>
+  <li><strong>蛋白质形态很重要</strong>：大分子完整蛋白消化慢，小分子肽（比如通过酶解技术得到的鸡骨蛋白胨）几乎不需要消化就能直接吸收。实测消化率能做到 95% 以上的，对肠胃猫来说是质的区别。</li>
+  <li><strong>零乳糖</strong>：很多猫对牛奶中的乳糖不耐受。A2β-酪蛋白型奶蛋白不含乳糖，既能补充奶蛋白的营养，又不会引起腹泻。</li>
+</ul>
+<p>优炙陆韵悠食鸡主食罐就是针对肠胃敏感猫设计的——单一鸡肉源 + 鸡骨蛋白胨小分子肽 + 消化率 ≥95%。但不管你选哪个品牌，记住：<strong>换粮的节奏比粮本身更影响肠胃感受</strong>。</p>
+    `
+  },
+  diaomao: {
+    title: '猫咪掉毛严重什么原因？可能不是换季',
+    tag: '毛发护理',
+    date: '2026年7月',
+    body: `
+<p>猫掉毛，大部分人都觉得"正常，换季嘛"。但如果你家猫<strong>不分季节地掉毛</strong>，或者一撸一手毛、地板一天不扫就一层，那就不是换季的事了。</p>
+
+<h3>掉毛的三种原因，只有一种是正常的</h3>
+<p><strong>1. 季节性换毛（正常）</strong></p>
+<p>每年春秋两季，猫会大量脱换被毛应对温度变化。持续2-4周，之后恢复正常。特征是全身均匀掉毛，皮肤不红不痒。</p>
+<p><strong>2. 营养性掉毛（可改善）</strong></p>
+<p>这是最常见的异常掉毛。毛发本质上是角蛋白结构，而角蛋白的合成需要特定的营养原料：</p>
+<ul>
+  <li>优质动物蛋白（不是植物蛋白充数的"粗蛋白"）</li>
+  <li>Omega-3 脂肪酸（维持皮肤屏障，减少干屑和掉毛）</li>
+  <li>D-生物素（维生素B7，直接参与角蛋白合成，缺了它毛囊长不出好毛）</li>
+  <li>锌（缺锌会导致毛发干脆、易断）</li>
+</ul>
+<p>如果你家猫吃的猫粮粗蛋白不低但掉毛还是严重，<strong>大概率是蛋白来源不好（植物蛋白多、动物蛋白少）加上缺乏 Omega-3 和生物素</strong>。</p>
+<p><strong>3. 病理原因（需就医）</strong></p>
+<p>局部掉毛、皮肤红肿、过度舔舐——可能是猫癣、寄生虫、过敏或甲亢，需要去医院。</p>
+
+<h3>改善掉毛，从这三点入手</h3>
+<p><strong>第一步：看配料表。</strong>猫粮配料表前三位应该是明确的动物肉源（鲜鸡肉、金枪鱼等），而不是"肉粉""禽类副产品""植物蛋白粉"。</p>
+<p><strong>第二步：补 Omega-3 和生物素。</strong>Omega-3 的主要来源是深海鱼油和亚麻籽粉（冷压脱壳的更有用）。生物素在蛋黄和肝脏中含量高，但高温加工会大量损耗——所以配得好不如吸收得好。</p>
+<p><strong>第三步：坚持至少4周再评价。</strong>毛发生长周期约3-4周，换了新粮两天就期待不掉毛是不现实的。持续喂4周后，新长出来的毛发质量才能反映新粮的效果。</p>
+<p>优炙海韵深海鲔主打的就是美毛——冷压亚麻籽粉 Omega-3 + D-生物素 + 金枪鱼天然鱼油，专为毛发光泽和皮肤屏障设计。但说实话，任何添加了足量 Omega-3 和生物素的高肉主食罐，坚持4周以上都能看到改善。<strong>关键是坚持</strong>。</p>
+    `
+  },
+  youmao: {
+    title: '幼猫什么时候可以吃湿粮？离乳期喂养全攻略',
+    tag: '幼猫护理',
+    date: '2026年6月',
+    body: `
+<p>捡到小猫或自家猫生了崽，第一个问题永远是：什么时候可以开始吃饭？</p>
+
+<h3>离乳时间线</h3>
+<ul>
+  <li><strong>0-4周</strong>：纯母乳或猫专用羊奶粉。不要喂任何固体食物，肠胃尚未发育。</li>
+  <li><strong>4周起</strong>：可以尝试湿粮了。但这个阶段的湿粮不是随便哪个罐头都行——<strong>质地比配方更重要</strong>。慕斯状、绵密细腻的质地最接近母乳口感，小猫不会抗拒。肉泥粗硬、有明显颗粒感的罐头先别用。</li>
+  <li><strong>6-8周</strong>：正式进入混合喂养。母乳/奶粉 + 湿粮各一半。可以用温水把慕斯罐头稍微稀释，让质地更像奶。</li>
+  <li><strong>8-12周</strong>：完全断奶，湿粮为主。每天3-4餐，少量多餐。此时可以尝试引入一点干粮（泡软），但不强制。</li>
+  <li><strong>3个月以上</strong>：可以吃任何质地的主食罐了。零食罐（比如肉丝质地）也可以少量尝试。</li>
+</ul>
+
+<h3>幼猫湿粮怎么选</h3>
+<p>三个硬指标：</p>
+<ul>
+  <li><strong>粗蛋白 ≥50%</strong>（干物质基础）。小猫长身体，蛋白质需求比成年猫高。</li>
+  <li><strong>零乳糖</strong>。小猫消化系统本来就不成熟，普通牛奶的乳糖会直接导致腹泻。</li>
+  <li><strong>含牛磺酸</strong>。牛磺酸对幼猫的视力和心脏发育至关重要，猫自身合成不了，必须从食物中获取。</li>
+</ul>
+<p>一个容易被忽视的点：<strong>蛋白来源最好是动物蛋白</strong>。幼猫不是小型成年猫，它们对植物蛋白的利用率极低。配料表里如果出现"玉米蛋白粉""大豆蛋白"，不管粗蛋白数字多高，小猫都吸收不了多少。</p>
+<p>优炙肉蛋奶三重奶昔罐是专门为离乳幼猫设计的——慕斯质地 + 鲜鸡胸肉 + 羊奶粉 + 鸡蛋，三重动物蛋白协同，零乳糖。但品牌不重要，<strong>质地+动物蛋白+零乳糖</strong>这三个要点你记住了，任何罐头的判断标准都一样。</p>
+    `
+  },
+  heshui: {
+    title: '猫咪不爱喝水怎么办？五个方法骗猫多喝水',
+    tag: '日常保健',
+    date: '2026年7月',
+    body: `
+<p>猫是沙漠动物后裔，天生对口渴的感知很弱。野外的猫从猎物血液中获取大量水分，而家猫吃干粮的话——<strong>一碗干粮配一碗水，其实喝不够</strong>。</p>
+<p>长期饮水不足的后果：尿液浓缩，矿物质结晶风险大增，公猫尤其容易尿道堵塞。去过一次宠物医院导尿的猫主人应该都知道那是什么感觉——又心疼又肉疼。</p>
+
+<h3>五个骗猫喝水的方法，按效果排序</h3>
+
+<p><strong>1. 湿粮替代干粮（最有效）</strong></p>
+<p>这是根本解决方案。猫罐头的含水量约 78%，一罐 85g 主食罐相当于给猫喝了约 66ml 水——猫咪完全意识不到自己被"骗"了，因为它只是在吃饭。而一碗干粮含水量不到 10%，猫得额外喝大量水才能补足差距。</p>
+<p><strong>不需要完全放弃干粮。</strong>早上干粮自由采食 + 晚上一罐主食罐，这种干湿搭配方式既能保证热量摄入，又能显著提升每日水分摄入。</p>
+
+<p><strong>2. 流心质地罐头（骗水进阶版）</strong></p>
+<p>如果普通肉泥罐头的含水量还不够，流心罐是一个升级选项——外层肉泥包裹中心流心酱，整体水分含量比传统肉泥更高，而且双层质地挑嘴猫也愿意吃。</p>
+
+<p><strong>3. 多处放置水碗</strong></p>
+<p>猫不会专门走到某个角落只为了喝水。在它常待的地方（沙发旁、窗台边、猫抓板附近）各放一个水碗，每次路过都能顺便喝一口。</p>
+
+<p><strong>4. 水碗换成宽口浅底</strong></p>
+<p>猫不喜欢胡须碰到碗边——会触发触须神经的不适感。用宽大的浅口碗或瓷盘子装水，猫喝的概率比窄口小碗高一倍。</p>
+
+<p><strong>5. 流动水</strong></p>
+<p>猫对流动水的兴趣天然大于静水。宠物饮水机有用，但不是每只猫都买账。先试前四个方法，前四个不花钱且效果更稳定。</p>
+    `
+  },
+  shuhou: {
+    title: '猫咪术后恢复吃什么？高蛋白滋补食材推荐',
+    tag: '康复护理',
+    date: '2026年6月',
+    body: `
+<p>猫咪做完绝育或其他手术后，身体的代谢需求会发生明显变化——伤口愈合需要额外的蛋白质和能量，但麻醉和手术应激又会导致食欲下降。</p>
+<p><strong>术后营养的核心矛盾是：猫需要的更多，但吃得下去的更少。</strong>所以选什么吃的，比平时重要得多。</p>
+
+<h3>术后食物的三个硬要求</h3>
+<ul>
+  <li><strong>高蛋白、高热量密度</strong>：术后猫可能一天只吃平时一半的量，所以每一口的营养浓度必须更高。粗蛋白 ≥52%（干物质基础）是底线。</li>
+  <li><strong>易消化</strong>：麻醉后肠胃蠕动减慢，大分子蛋白消化负担重。小分子肽（酶解技术处理的蛋白胨类成分）几乎不需要消化就能吸收，术后头三天尤其关键。</li>
+  <li><strong>质地软、易舔食</strong>：术后猫可能懒、可能疼、可能戴着伊丽莎白圈行动受限。慕斯或肉泥质地最友好，猫趴着舔就行，不需要费劲咬。</li>
+</ul>
+
+<h3>推荐食材</h3>
+<ul>
+  <li><strong>鲜乳鸽</strong>：鸽肉在中医传统中是"补气血"的滋补食材，蛋白含量比普通鸡肉高约30%，脂肪适中，不会给虚弱的肠胃造成负担。18-20天龄的嫩鸽肉质更细，消化率更高。</li>
+  <li><strong>A2β-酪蛋白</strong>：零乳糖奶蛋白，提供高生物价值的蛋白质，同时不刺激肠道。牛奶蛋白里最温和的一种。</li>
+  <li><strong>鸡骨蛋白胨</strong>：酶解后的小分子肽，消化率能做到95%以上。术后猫肠胃功能下降的时候，小分子肽是"被动的营养输入"——不需要肠胃做功。</li>
+  <li><strong>益生菌</strong>：麻醉和抗生素会影响肠道菌群，补充活性益生菌有助于恢复肠道正常功能。</li>
+</ul>
+<p>优炙空韵云境鸽主食罐就是基于这个逻辑——鲜乳鸽 + A2β-酪蛋白 + 鸡骨蛋白胨 + 嗜酸乳杆菌，全部指向术后恢复的三个核心需求。同样，品牌不是重点，<strong>高蛋白+易消化+软质地</strong>这个公式你记住了就行。</p>
+    `
+  },
+  lingtianjia: {
+    title: '猫罐头"零添加"是真的吗？如何看懂配料表',
+    tag: '成分科普',
+    date: '2026年8月',
+    body: `
+<p>走进宠物店，十个罐头九个写着"天然""零添加"。但配料表是不会骗人的——只是大部分人不会看。</p>
+
+<h3>配料表上不写的三种东西</h3>
+<p><strong>1. 防腐剂</strong></p>
+<p>猫罐头的保质期可以靠<strong>121°C高温物理灭菌 + 真空密封</strong>来实现，不需要化学防腐剂。所以正规罐头配料表里确实不会出现山梨酸钾、苯甲酸钠这些东西。但如果一个罐头宣称"零防腐"但保质期只有6个月——那说明杀菌工艺不到位，比加防腐剂更危险。</p>
+<p>判断方法：<strong>看保质期和灭菌工艺。</strong>工艺写不写不一定，但保质期24个月且罐体真空密封（打开时有"砰"的气密声）的，大概率是物理灭菌而非化学防腐。</p>
+
+<p><strong>2. 诱食剂</strong></p>
+<p>这是配料表上最难判断的一项。化学诱食剂（如焦磷酸盐、谷氨酸钠）配料表上会写，但<strong>水解蛋白</strong>和<strong>天然香料</strong>这两个名词属于灰色地带——它们本质上也是诱食，但可以被称作"天然原料"。</p>
+<p>判断方法：<strong>看含肉量。</strong>含肉量 85% 以上的罐头，肉本身的氨基酸风味对猫来说已经足够"诱食"了——猫的嗅觉是人的14倍。不需要额外加东西来骗它。如果一个罐头的配料表前三位是"水、肉粉、植物蛋白"，然后又加了一堆"香料""水解物"——那肉本身确实不够香。</p>
+
+<p><strong>3. 胶质</strong></p>
+<p>卡拉胶、瓜尔胶、黄原胶——这些是从海藻或植物中提取的增稠剂，配料表上必写。它们的作用是让罐头肉泥看起来浓稠均匀，但<strong>不是猫需要的营养</strong>，部分研究还显示卡拉胶可能对肠胃有刺激性。</p>
+<p>判断方法：<strong>看配料表有没有"XX胶"。</strong>没有，就是靠肉蛋白本身在灭菌后自然凝结——这种质地不如加胶的均匀好看，但它只含肉。</p>
+
+<h3>快速读配料表的三个技巧</h3>
+<ol>
+  <li><strong>前三位看肉</strong>：鲜鸡肉、鲜鸡胸肉、金枪鱼 → 好。肉粉、禽类副产品、植物蛋白 → 差。</li>
+  <li><strong>中间看有没有胶</strong>：卡拉胶、瓜尔胶等出现，说明肉蛋白本身的凝结力不够。</li>
+  <li><strong>末尾看添加剂</strong>：牛磺酸、维生素A/D3/E、矿物质 → 这些是必需营养强化。焦磷酸盐、谷氨酸钠 → 诱食剂。</li>
+</ol>
+<p>优炙所有产品配料表在抖音店铺详情页公开展示。但我们更希望你能用上面这个方法<strong>自己判断任何品牌</strong>。会看配料表的猫主人越来越多，这个行业才会越来越好。</p>
+    `
+  },
+  ganshi: {
+    title: '干粮和湿粮怎么搭配？一张表看懂每日喂食方案',
+    tag: '喂养指南',
+    date: '2026年7月',
+    body: `
+<p>"干粮好还是湿粮好"是一个被过度简化的问题。正确答案是：<strong>看情况，两者各有优势，搭配使用最优。</strong></p>
+
+<h3>干粮和湿粮的各自优势</h3>
+<ul>
+  <li><strong>干粮</strong>：热量密度高（1g干粮≈3-4g湿粮的热量），方便自由采食、不易变质。咀嚼时有机械摩擦作用，对牙齿有一定好处。但不含水分。</li>
+  <li><strong>湿粮（罐头）</strong>：含水量约78%，是最自然的补水方式。适口性高，高动物蛋白。但开封后需要冷藏且48小时吃完。</li>
+</ul>
+
+<h3>推荐方案：早上干粮 + 晚上罐头</h3>
+<p>这个搭配方式<strong>兼顾了两者的优势</strong>：</p>
+<ul>
+  <li>白天主人不在家时，干粮盆放着自由采食，猫不会饿；</li>
+  <li>晚上主人回家后开一罐湿粮，既是补水也是互动——猫会把开罐的声音和主人的陪伴联系在一起。</li>
+</ul>
+
+<h3>每日喂食量参考表</h3>
+<p>以一罐主食罐（85g） + 干粮为参考：</p>
+<ul>
+  <li><strong>2kg 猫咪</strong>：晚上 1 罐主食罐 + 白天约 15-20g 干粮</li>
+  <li><strong>4kg 猫咪</strong>：晚上 1 罐主食罐 + 白天约 30-40g 干粮</li>
+  <li><strong>6kg 猫咪</strong>：晚上 1.5 罐主食罐 + 白天约 45-55g 干粮</li>
+  <li><strong>老年猫/活动量低</strong>：晚上 0.5-1 罐主食罐 + 白天约 15-25g 干粮</li>
+</ul>
+<p>以上为参考值。<strong>最好的判断方式是观察猫的体态</strong>：能摸到肋骨但看不到骨头，从上方俯视有轻微腰线——这就是健康体重。</p>
+
+<h3>干湿混在同一顿可以吗</h3>
+<p>可以，但有个细节：<strong>不要提前拌好放太久。</strong>湿粮会让干粮吸水变软，蛋白质和碳水化合物混合后在室温下容易滋生细菌。如果拌了，半小时内吃完。</p>
+<p>零食罐（比如鸡丝三文鱼）建议作为奖励单独喂，每天不超过日总摄入的15%。零食罐不能替代主食罐——营养结构不同。</p>
+    `
+  },
+  xiaohua: {
+    title: '猫的消化率是什么？为什么≥95%对肠胃猫很重要',
+    tag: '肠胃健康',
+    date: '2026年8月',
+    body: `
+<p>消化率可能是猫粮所有指标里<strong>最被低估的一个</strong>。大多数猫主人看粗蛋白、看配料表，但很少看消化率——因为大部分猫粮压根不标注这个数值。</p>
+
+<h3>消化率是什么</h3>
+<p>简单说：<strong>猫吃进去的蛋白质里，有多少被身体真正吸收了。</strong>计算方法：（摄入蛋白质 - 粪便排出的蛋白质残渣）/ 摄入蛋白质 × 100%。</p>
+<p>举个例子：两个罐头粗蛋白都是52%。一个消化率95%，一个消化率80%。看起来一样，但猫实际吸收到的蛋白差了将近20%。这20%的差距，对肠胃敏感的猫来说可能就是"正常便便"和"软便"的区别。</p>
+
+<h3>为什么消化率对肠胃猫特别重要</h3>
+<p>未被消化的蛋白质进入大肠后，会被肠道细菌发酵利用，产生气体和刺激性代谢物。这就是为什么低消化率的粮吃了容易<strong>软便、放屁、便臭</strong>——不是粮坏了，是吸收不完的残渣在大肠里"发酵"了。</p>
+<p>肠胃本身就敏感的猫（比如布偶、无毛、折耳等品种），对这部分未消化残渣的反应更剧烈。</p>
+
+<h3>什么样成分的消化率高</h3>
+<ul>
+  <li><strong>动物蛋白 > 植物蛋白</strong>：猫是纯肉食动物，对动物蛋白的消化率天生远高于植物蛋白。配料表里如果有"玉米蛋白粉""大豆蛋白"，不管粗蛋白多高，实际吸收率都大打折扣。</li>
+  <li><strong>小分子肽 > 大分子蛋白</strong>：完整蛋白质需要肠胃分泌酶来分解，而酶解技术处理过的小分子肽（比如鸡骨蛋白胨）几乎不需要消化过程就能被肠道直接吸收。对术后、幼猫、老年猫来说，这是质的区别。</li>
+  <li><strong>单一肉源 > 混合肉源</strong>：每种动物的蛋白结构不同，分解它们需要不同的酶组合。单一肉源减轻了肠胃的"分类负担"。</li>
+</ul>
+
+<h3>买猫粮时怎么判断消化率</h3>
+<p>大多数品牌不标注消化率，但你可以从侧面判断：</p>
+<ul>
+  <li><strong>配料表前三位全是明确的动物肉</strong>（不是肉粉、不是副产品）→ 动物蛋白占比高 → 消化率大概率不低。</li>
+  <li><strong>有酶解、小分子肽等工艺描述</strong> → 说明品牌在消化吸收上做了额外功课。</li>
+  <li><strong>品牌主动公开消化率数据</strong> → 这是最直接的证据。但别光看他们写多少，问一句 "这个数据是实测还是估算的"。</li>
+</ul>
+<p>优炙的鸡骨蛋白胨实测消化率为≥95%。我们不觉得这是个值得吹嘘的数字——<strong>这只是你应该要求任何猫粮达到的标准</strong>。给猫吃的东西，消化率是天经地义该关心的指标。</p>
+    `
+  }
+};
+
+function showArticle(id) {
+  const a = articles[id];
+  if (!a) return;
+  document.getElementById('listView').style.display = 'none';
+  document.getElementById('articleView').classList.add('active');
+  document.getElementById('articleContent').innerHTML = `
+    <div class="tag" style="margin-bottom:.6rem;font-size:.5rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase">${a.tag}</div>
+    <h2>${a.title}</h2>
+    <div class="meta">优炙宠物营养实验室 · ${a.date}</div>
+    <div class="body">${a.body}</div>
+    <p style="margin-top:2rem;padding:1rem 1.2rem;border-left:2px solid var(--gold);font-size:.75rem;color:var(--text-dim)">⚠️ 本文内容基于猫咪喂养通用知识整理，仅供参考，不构成兽医建议。如猫咪出现持续不适，请及时就医。</p>
+    <div class="related" id="relatedArticles"></div>
+  `;
+  // Show related articles
+  const others = Object.entries(articles).filter(([k]) => k !== id);
+  const shuffled = others.sort(() => Math.random() - 0.5).slice(0, 2);
+  document.getElementById('relatedArticles').innerHTML = shuffled.map(([k, v]) =>
+    `<a href="#${k}" class="article-card" onclick="showArticle('${k}')" style="cursor:pointer">
+      <div class="tag">${v.tag}</div>
+      <h2 style="font-size:.95rem">${v.title}</h2>
+      <div class="read">阅读 →</div>
+    </a>`
+  ).join('');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showList() {
+  document.getElementById('listView').style.display = '';
+  document.getElementById('articleView').classList.remove('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Handle hash on load
+window.addEventListener('load', () => {
+  const hash = window.location.hash.slice(1);
+  if (hash && articles[hash]) showArticle(hash);
+});
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash.slice(1);
+  if (hash && articles[hash]) showArticle(hash);
+  else showList();
+});
+</script>
+</body>
+</html>

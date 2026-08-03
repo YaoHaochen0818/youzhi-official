@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>品牌视觉识别系统 — 优炙 YOUZHI</title>
+<meta name="description" content="优炙 YOUZHI 品牌视觉识别系统 — Logo体系、品牌色板、字体规范、辅助图形、应用示例。V1.0 · 2026。">
+<meta property="og:title" content="优炙 YOUZHI | 品牌VI系统">
+<meta property="og:description" content="Logo体系 · 品牌色板 · 字体规范 · 辅助图形 · 应用示例">
+<meta property="og:image" content="../assets/logo.jpg">
+<link rel="icon" type="image/svg+xml" href="logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A96E;
+  --gold-light: #E8D5A3;
+  --gold-dark: #A6864B;
+  --gold-dim: rgba(201,169,110,0.12);
+  --bg: #08080C;
+  --bg-card: #0E0E14;
+  --border: rgba(255,255,255,0.06);
+  --text: #FFF;
+  --text-soft: rgba(255,255,255,0.6);
+  --text-dim: rgba(255,255,255,0.35);
+  --font-sans: 'Noto Serif SC', serif;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-mono: 'Noto Serif SC', serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--font-sans); font-weight: 300;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,12,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav .logo{font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:.06em}
+nav .logo .gold{color:var(--gold)}
+nav .links{display:flex;list-style:none;gap:2rem;align-items:center}
+nav .links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;transition:color .3s;font-weight:400}
+nav .links a:hover{color:#fff}
+
+/* Cover */
+.cover {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 4rem 2rem; position: relative;
+  background: radial-gradient(ellipse at 50% 40%, rgba(201,169,110,0.06), transparent 70%);
+}
+.cover .vi-label {
+  font-size: 0.6rem; letter-spacing: 0.5em; color: var(--gold); text-transform: uppercase; margin-bottom: 2rem;
+}
+.cover .brand-name {
+  font-family: var(--font-serif); font-size: clamp(5rem, 10vw, 9rem);
+  font-weight: 900; line-height: 0.9; letter-spacing: 0.04em;
+}
+.cover .brand-en {
+  font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300; font-style: italic; color: var(--gold-light);
+  letter-spacing: 0.3em; margin-top: 0.3em;
+}
+.cover .vi-version {
+  font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.2em; margin-top: 3rem;
+}
+
+/* Scroll hint */
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:var(--text-dim);font-size:.58rem;letter-spacing:.12em;animation:fadeInUp .8s ease 1s forwards;opacity:0}
+@keyframes fadeInUp{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+/* Sections */
+.section {
+  padding: 6rem 4rem; border-top: 1px solid var(--border);
+}
+.section-num {
+  font-family: var(--font-mono); font-size: 0.6rem; color: var(--gold);
+  letter-spacing: 0.3em; margin-bottom: 1rem;
+}
+.section-title {
+  font-family: var(--font-serif); font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 700; line-height: 1.2; margin-bottom: 3rem;
+}
+.section-title .gold { color: var(--gold); }
+
+/* Layout */
+.container { max-width: 1200px; margin: 0 auto; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+/* Logo Showcase */
+.logo-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 3rem 2rem; text-align: center;
+}
+.logo-card.light-bg { background: #F5F5F0; color: #111; border-color: rgba(0,0,0,0.06); }
+.logo-card.light-bg .label { color: rgba(0,0,0,0.4); }
+.logo-card img { max-width: 100%; height: auto; margin-bottom: 1.5rem; }
+.logo-card .label {
+  font-size: 0.65rem; letter-spacing: 0.15em; color: var(--text-dim);
+}
+
+/* Color Swatches */
+.color-swatch {
+  border-radius: 12px; overflow: hidden; border: 1px solid var(--border);
+}
+.color-swatch .swatch-color { height: 160px; display: flex; align-items: flex-end; padding: 1.5rem; }
+.color-swatch .swatch-info { padding: 1.2rem 1.5rem; background: var(--bg-card); }
+.color-swatch .swatch-info .name { font-size: 0.85rem; font-weight: 500; }
+.color-swatch .swatch-info .hex {
+  font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);
+  margin-top: 0.3rem;
+}
+.color-swatch .swatch-info .usage { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.5rem; }
+
+/* Typography */
+.type-sample { margin-bottom: 3rem; }
+.type-sample .type-name {
+  font-size: 0.6rem; letter-spacing: 0.25em; color: var(--gold); text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.type-sample .type-preview {
+  font-family: var(--font-serif); font-size: 3rem; font-weight: 700;
+  margin-bottom: 0.5rem; line-height: 1.2;
+}
+.type-sample .type-preview.display { font-family: var(--font-display); font-style: italic; font-weight: 400; }
+.type-sample .type-preview.mono { font-family: var(--font-mono); font-size: 1.5rem; text-transform: uppercase; }
+.type-sample .type-specs {
+  font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim); letter-spacing: 0.05em;
+}
+
+/* Usage grid */
+.usage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.usage-item { padding: 2rem; border-radius: 8px; text-align: center; }
+.usage-item.dos { background: rgba(76,175,80,0.08); border: 1px solid rgba(76,175,80,0.15); }
+.usage-item.donts { background: rgba(244,67,54,0.08); border: 1px solid rgba(244,67,54,0.15); }
+.usage-item .usage-label {
+  font-size: 0.7rem; letter-spacing: 0.2em; margin-bottom: 1rem; font-weight: 500;
+}
+.usage-item.dos .usage-label { color: #4CAF50; }
+.usage-item.donts .usage-label { color: #F44336; }
+
+/* Divider */
+.divider { width: 100%; height: 1px; background: var(--border); margin: 3rem 0; }
+
+/* Application Cards */
+.app-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden; transition: all 0.4s;
+}
+.app-card:hover { border-color: var(--gold-dim); }
+.app-card .app-preview {
+  height: 250px; display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(circle, rgba(201,169,110,0.04), transparent);
+  font-size: 3rem; padding: 1rem;
+}
+.app-card .app-info { padding: 1.2rem 1.5rem; }
+.app-card .app-info .app-name { font-size: 0.85rem; font-weight: 500; }
+.app-card .app-info .app-desc { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.3rem; }
+
+/* Space guide */
+.space-demo {
+  display: flex; align-items: center; gap: 2rem;
+  padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+}
+.space-demo .logo-box {
+  padding: 2rem; border: 1px dashed var(--gold-dim); border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+}
+.space-demo .space-label {
+  font-family: var(--font-mono); font-size: 0.6rem; color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+/* Back to top */
+.back-top {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 99;
+  width: 40px; height: 40px; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: var(--gold); text-decoration: none; font-family: var(--font-serif); font-size: 1rem;
+  transition: all 0.3s; opacity: 0; pointer-events: none; transform: translateY(10px);
+}
+.back-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.back-top:hover { border-color: var(--gold); box-shadow: 0 0 30px rgba(201,169,110,.15); }
+
+/* Footer */
+.vi-footer{padding:3rem 2.5rem;border-top:1px solid var(--border);text-align:center}
+.vi-footer a{color:var(--text-soft);text-decoration:none;font-size:.7rem;transition:color .3s}
+.vi-footer a:hover{color:#fff}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section { padding: 4rem 1.5rem; }
+  .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .usage-grid { grid-template-columns: 1fr; }
+  nav .links { display: none; }
+  nav { padding: 1rem 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">优<span class="gold">炙</span></a>
+  <ul class="links">
+    <li><a href="../index.html">← 返回首页</a></li>
+    <li><a href="../product.html">产品</a></li>
+    <li><a href="../faq.html">帮助中心</a></li>
+    <li><a href="../blog.html">喂养知识</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════ COVER ═══════ -->
+<section class="cover">
+  <div class="vi-label">Brand Visual Identity System</div>
+  <h1 class="brand-name">优炙</h1>
+  <p class="brand-en">YOUZHI</p>
+  <p class="vi-version">V1.0 · 2026年8月 · 品牌视觉识别系统</p>
+  <p style="font-size:0.7rem;color:var(--text-dim);margin-top:1rem;letter-spacing:0.1em">本文件为优炙品牌所有视觉应用的标准指南</p>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-hint">
+    <svg width="20" height="30" viewBox="0 0 20 30"><rect x="7" y="4" width="6" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="10" cy="10" r="2" fill="currentColor"><animate attributeName="cy" values="10;14;10" dur="2s" repeatCount="indefinite"/></circle></svg>
+    <span>向下滚动</span>
+  </div>
+</section>
+
+<!-- ═══════ 01 LOGO ═══════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-num">01</div>
+    <h2 class="section-title">品牌标识<br><span class="gold">Logo System</span></h2>
+
+    <div class="grid-2" style="margin-bottom:3rem">
+      <div class="logo-card">
+        <img src="logo-horizontal.svg" alt="横版Logo" style="width:90%">
+        <div class="label">横版标识 · 网站导航 / 名片 / 邮件签名</div>
+      </div>
+      <div class="logo-card">
+        <img src="logo-vertical.svg" alt="竖版Logo" style="width:70%">
+        <div class="label">竖版标识 · PPT封面 / 海报 / 包装正面</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="logo-card">
+        <img src="logo-mark.svg" alt="图标" style="width:45%">
+        <div class="label">品牌图腾 · App图标 / 社媒头像 / 水印</div>
+      </div>
+      <div class="logo-card light-bg">
+        <img src="logo-horizontal.svg" alt="浅色背景Logo">
+        <div class="label">浅色背景版本 · 白底 / 印刷品</div>
+      </div>
+    </div>
+
+    <!-- Clear Space -->
+    <h3 style="font-family:var(--font-serif);font-size:1.6rem;font-weight:600;margin:3rem 0 1.5rem">安全间距</h3>
+    <div class="space-demo">
+      <div class="space-label" style="text-align:center">
+        最小留白<br>≥ Logo 高度 × 1
+      </div>
+      <div class="logo-box">
+        <span style="font-family:var(--font-serif);font-size:2rem;font-weight:700;line-height:1">
+          优<span style="color:var(--gold)">炙</span></span>
+      </div>
+      <div class="space-label" style="text-align:center">
+        最小留白<br>≥ Logo 高度 × 1
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-serif);font-size:1.6rem;font-weight:600;margin:3rem 0 1.5rem">Logo 使用规范</h3>
+    <div class="usage-grid">
+      <div class="usage-item dos">
+        <div class="usage-label">✅ 正确用法</div>
+        <p style="font-size:0.8rem;color:var(--text-soft);line-height:2;text-align:left">
+          · 保持原始比例<br>
+          · 优先使用金色版本<br>
+          · 深色背景用金色，浅色背景用黑色<br>
+          · 四周保持安全间距
+        </p>
+      </div>
+      <div class="usage-item donts">
+        <div class="usage-label">❌ 禁止用法</div>
+        <p style="font-size:0.8rem;color:var(--text-soft);line-height:2;text-align:left">
+          · 不要拉伸、压缩变形<br>
+          · 不要改变颜色为金以外的色<br>
+          · 不要在复杂纹理上放置<br>
+          · 不要旋转或加阴影效果
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 02 COLOR ═══════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-num">02</div>
+    <h2 class="section-title">品牌色彩<br><span class="gold">Color Palette</span></h2>
+
+    <div class="grid-3" style="margin-bottom:3rem">
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#C9A96E"></div>
+        <div class="swatch-info">
+          <div class="name">优炙金 · Youzhi Gold</div>
+          <div class="hex">#C9A96E · CMYK 15 25 60 0</div>
+          <div class="usage">主色 · Logo / 按钮 / 强调 / 标题点缀</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#E8D5A3"></div>
+        <div class="swatch-info">
+          <div class="name">浅金 · Light Gold</div>
+          <div class="hex">#E8D5A3 · CMYK 5 12 40 0</div>
+          <div class="usage">辅色 · 悬停态 / 大面积浅色应用</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#A6864B"></div>
+        <div class="swatch-info">
+          <div class="name">深金 · Deep Gold</div>
+          <div class="hex">#A6864B · CMYK 25 35 70 0</div>
+          <div class="usage">辅色 · 文字 / 边框 / 小面积点缀</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#08080C"></div>
+        <div class="swatch-info">
+          <div class="name">品牌黑 · Brand Black</div>
+          <div class="hex">#08080C</div>
+          <div class="usage">背景主色 · 网页 / PPT / 包装底色</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#0E0E14"></div>
+        <div class="swatch-info">
+          <div class="name">卡片黑 · Card Black</div>
+          <div class="hex">#0E0E14</div>
+          <div class="usage">卡片背景 · 二级容器底色</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#FFFFFF"></div>
+        <div class="swatch-info">
+          <div class="name" style="color:#111">白色 · White</div>
+          <div class="hex" style="color:rgba(0,0,0,0.5)">#FFFFFF</div>
+          <div class="usage" style="color:rgba(0,0,0,0.5)">文字 / 印刷品底色</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 03 TYPOGRAPHY ═══════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-num">03</div>
+    <h2 class="section-title">品牌字体<br><span class="gold">Typography</span></h2>
+
+    <div class="grid-2">
+      <div>
+        <div class="type-sample">
+          <div class="type-name">中文标题</div>
+          <div class="type-preview">优炙·三重营养</div>
+          <div class="type-specs">Noto Serif SC · Bold 700 · 字间距 0.02em</div>
+        </div>
+        <div class="type-sample">
+          <div class="type-name">中文正文</div>
+          <div class="type-preview" style="font-family:var(--font-sans);font-weight:300;font-size:1.5rem">
+            以科学营养守护每一只猫咪的全生命周期健康。</div>
+          <div class="type-specs">Noto Serif SC · Light 300 · 行高 1.8</div>
+        </div>
+      </div>
+      <div>
+        <div class="type-sample">
+          <div class="type-name">英文展示</div>
+          <div class="type-preview display">Premium Pet Nutrition</div>
+          <div class="type-specs">Cormorant Garamond · Italic 300 · 字间距 0.2em</div>
+        </div>
+        <div class="type-sample">
+          <div class="type-name">技术数据</div>
+          <div class="type-preview mono">≥95% · OMEGA-3</div>
+          <div class="type-specs">Noto Serif SC · Bold 700 · 技术指标</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 04 GRAPHIC ELEMENTS ═══════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-num">04</div>
+    <h2 class="section-title">辅助图形<br><span class="gold">Graphic Elements</span></h2>
+
+    <div class="grid-3">
+      <div class="app-card">
+        <div class="app-preview">
+          <svg width="160" height="160" viewBox="0 0 160 160">
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.3"/>
+            <circle cx="80" cy="80" r="50" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.2"/>
+            <circle cx="80" cy="80" r="30" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="80" cy="80" r="4" fill="#C9A96E" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-name">同心圆环</div>
+          <div class="app-desc">品牌核心图形 · 背景装饰 · 包装底纹</div>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-preview">
+          <svg width="160" height="160" viewBox="0 0 160 160">
+            <line x1="20" y1="80" x2="140" y2="80" stroke="#C9A96E" stroke-width="0.5" opacity="0.15"/>
+            <line x1="80" y1="20" x2="80" y2="140" stroke="#C9A96E" stroke-width="0.5" opacity="0.15"/>
+            <circle cx="80" cy="80" r="2" fill="#C9A96E" opacity="0.5"/>
+            <line x1="40" y1="40" x2="60" y2="30" stroke="#C9A96E" stroke-width="0.5" opacity="0.1"/>
+            <line x1="120" y1="40" x2="100" y2="30" stroke="#C9A96E" stroke-width="0.5" opacity="0.1"/>
+            <line x1="40" y1="120" x2="60" y2="130" stroke="#C9A96E" stroke-width="0.5" opacity="0.1"/>
+            <line x1="120" y1="120" x2="100" y2="130" stroke="#C9A96E" stroke-width="0.5" opacity="0.1"/>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-name">十字准星</div>
+          <div class="app-desc">科技/精准感 · 技术页面 · 数据卡片</div>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-preview">
+          <svg width="160" height="160" viewBox="0 0 160 160">
+            <path d="M20,20 L60,20 M20,20 L20,60" stroke="#C9A96E" stroke-width="0.8" opacity="0.4" fill="none"/>
+            <path d="M140,20 L100,20 M140,20 L140,60" stroke="#C9A96E" stroke-width="0.8" opacity="0.4" fill="none"/>
+            <path d="M20,140 L60,140 M20,140 L20,100" stroke="#C9A96E" stroke-width="0.8" opacity="0.4" fill="none"/>
+            <path d="M140,140 L100,140 M140,140 L140,100" stroke="#C9A96E" stroke-width="0.8" opacity="0.4" fill="none"/>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-name">角标装饰</div>
+          <div class="app-desc">卡片边角 · 证书边框 · 品质标识</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 05 APPLICATION ═══════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-num">05</div>
+    <h2 class="section-title">应用示例<br><span class="gold">Application</span></h2>
+
+    <div class="grid-3">
+      <div class="app-card">
+        <div class="app-preview" style="height:200px;flex-direction:column;gap:1rem">
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;width:80px;height:80px;display:flex;align-items:center;justify-content:center;font-size:2rem">🐱</div>
+          <div style="font-size:0.7rem;color:var(--text-soft)">优炙宠物食品</div>
+        </div>
+        <div class="app-info">
+          <div class="app-name">社媒头像</div>
+          <div class="app-desc">抖音 / 小红书 / 微信 · 使用品牌图腾圆形版</div>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-preview" style="height:200px;text-align:center">
+          <div style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;margin-bottom:0.3rem">优<span style="color:var(--gold)">炙</span></div>
+          <div style="font-size:0.6rem;color:var(--gold);letter-spacing:0.3em">PREMIUM PET NUTRITION</div>
+          <div style="margin-top:1rem;font-size:0.7rem;color:var(--text-dim)">创始人 · 皓宸</div>
+          <div style="font-size:0.65rem;color:var(--text-dim)">抖音：优炙宠物食品</div>
+        </div>
+        <div class="app-info">
+          <div class="app-name">电子名片</div>
+          <div class="app-desc">微信名片 / 邮件签名 · 横版Logo + 联系方式</div>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-preview" style="height:200px;gap:0.5rem">
+          <div style="width:70%;aspect-ratio:16/9;background:radial-gradient(ellipse at center,rgba(201,169,110,0.2),transparent);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:var(--font-serif);font-size:2rem;font-weight:900">优炙</span>
+          </div>
+        </div>
+        <div class="app-info">
+          <div class="app-name">直播间背景</div>
+          <div class="app-desc">深色背景 + 金色Logo + 产品陈列</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:2rem">
+      <div class="app-card">
+        <div class="app-preview" style="height:200px">
+          <div style="border:2px solid var(--gold);border-radius:8px;padding:1.5rem;text-align:center">
+            <div style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700">优<span style="color:var(--gold)">炙</span></div>
+            <div style="font-size:0.5rem;color:var(--gold);letter-spacing:0.2em;margin-top:0.3rem">PREMIUM CAT FOOD</div>
+            <div style="margin-top:0.5rem;font-size:0.6rem;color:var(--text-dim)">主食罐 · 85g</div>
+          </div>
+        </div>
+        <div class="app-info">
+          <div class="app-name">包装标签</div>
+          <div class="app-desc">深黑标签 + 金色Logo + 净含量</div>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-preview" style="height:200px">
+          <div style="width:90%;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:1rem;text-align:center">
+            <div style="font-size:0.55rem;color:var(--gold);letter-spacing:0.2em;margin-bottom:0.5rem">PREMIUM PET NUTRITION LAB</div>
+            <div style="font-family:var(--font-serif);font-size:1rem;font-weight:700;line-height:1.2">三重营养矩阵<br>精准守护全生命周期</div>
+          </div>
+        </div>
+        <div class="app-info">
+          <div class="app-name">宣传物料</div>
+          <div class="app-desc">广告 / 海报 / 展架 · 大标题 + 金色点缀</div>
+        </div>
+      </div>
+      <div class="app-card">
+        <div class="app-preview" style="height:200px;flex-direction:column;gap:0.3rem">
+          <div style="font-size:0.6rem;color:var(--gold);letter-spacing:0.2em">YOUZHI</div>
+          <div style="width:100px;height:1px;background:var(--gold);opacity:0.3"></div>
+          <div style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700">优炙</div>
+          <div style="width:100px;height:1px;background:var(--gold);opacity:0.3"></div>
+          <div style="font-size:0.5rem;color:var(--text-dim);letter-spacing:0.15em">PREMIUM · PURE · PRECISE</div>
+        </div>
+        <div class="app-info">
+          <div class="app-name">包装腰封</div>
+          <div class="app-desc">礼盒腰封 · Logo + 品牌标语</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 06 SPACING ═══════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-num">06</div>
+    <h2 class="section-title">版式间距<br><span class="gold">Layout & Spacing</span></h2>
+    <div class="grid-2">
+      <div>
+        <p style="color:var(--text-soft);font-size:0.9rem;line-height:2;margin-bottom:2rem">
+          优炙品牌视觉系统遵循严格的间距体系，所有应用统一使用以下间距倍数，确保品牌视觉的一致性。
+        </p>
+        <div class="space-demo" style="margin-bottom:1rem;display:flex;flex-direction:column;align-items:flex-start;">
+          <div style="display:flex;align-items:center;gap:1rem">
+            <div style="width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0"></div>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold)">4px</span>
+            <span style="font-size:0.7rem;color:var(--text-dim)">最小间距 · 图标间距 · 标签间距</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem;margin-top:1rem">
+            <div style="width:8px;height:8px;background:var(--gold);border-radius:2px;flex-shrink:0"></div>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold)">8px</span>
+            <span style="font-size:0.7rem;color:var(--text-dim)">基础间距 · 卡片内边距 · 列表间距</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem;margin-top:1rem">
+            <div style="width:16px;height:16px;background:var(--gold);border-radius:4px;flex-shrink:0"></div>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold)">16px</span>
+            <span style="font-size:0.7rem;color:var(--text-dim)">标准间距 · 区块间距 · 按钮间距</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem;margin-top:1rem">
+            <div style="width:32px;height:32px;background:var(--gold);border-radius:8px;flex-shrink:0"></div>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold)">32px</span>
+            <span style="font-size:0.7rem;color:var(--text-dim)">大间距 · 段落间距 · 模块间距</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:600;margin-bottom:1.5rem">黄金比例</h3>
+        <p style="color:var(--text-soft);font-size:0.85rem;line-height:2">
+          所有视觉应用中优先使用 4 的倍数作为间距基准，大模块间可使用 8 的倍数。边框统一使用 1px 宽度，保持极简克制。
+          圆形元素优先使用 50% 圆角（border-radius: 50%），卡片使用 12-16px 圆角，按钮使用 2-4px 圆角（保持锋利感）。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 07 FILE LIST ═══════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-num">07</div>
+    <h2 class="section-title">品牌文件包<br><span class="gold">Asset Checklist</span></h2>
+    <div style="color:var(--text-soft);font-size:0.85rem;line-height:2.5;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:2rem">
+      <div>📁 <span style="color:#fff">Logo</span> — logo-horizontal.svg · logo-vertical.svg · logo-mark.svg</div>
+      <div>📁 <span style="color:#fff">色彩</span> — color-palette.svg · 主色 / 辅色 / 背景色 · HEX + CMYK</div>
+      <div>📁 <span style="color:#fff">字体</span> — Noto Serif SC · Cormorant Garamond</div>
+      <div>📁 <span style="color:#fff">图形</span> — 同心圆 · 十字准星 · 角标 · 分隔线</div>
+      <div>📁 <span style="color:#fff">应用模板</span> — 社媒头像 · 名片 · PPT封面 · 直播间背景 · 包装标签</div>
+      <div>📁 <span style="color:#fff">本指南</span> — brand-vi-system.html（此文件）</div>
+    </div>
+
+    <!-- 品牌原始设计稿 -->
+    <h3 style="font-family:var(--font-serif);font-size:1.6rem;font-weight:600;margin:3rem 0 1.5rem">品牌原始标识<span class="gold"> · 设计源文件</span></h3>
+    <div class="grid-2">
+      <div class="logo-card">
+        <img src="assets/c4eeb47024c58318194e572f15963efd.jpg" alt="品牌Logo暗色版" style="width:85%">
+        <div class="label">品牌Logo · 暗色方形版</div>
+      </div>
+      <div class="logo-card">
+        <img src="assets/6bfc2c339bdaf7141919ba6c38df4b75.jpg" alt="品牌全案竖版" style="width:60%">
+        <div class="label">品牌全案视觉 · 竖版长图</div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:1.5rem">
+      <div class="logo-card">
+        <img src="assets/340a05bf23c5cb28c8dbccbaeda25adc.jpg" alt="品牌Logo极暗版" style="width:70%">
+        <div class="label">品牌标识 · 极暗黑底版</div>
+      </div>
+      <div class="logo-card">
+        <img src="assets/c7faaf729a817e1d38a7f5c0bba455e4.jpg" alt="品牌Logo暗灰版" style="width:80%">
+        <div class="label">品牌标识 · 暗灰简约版</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="vi-footer">
+  <div style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;margin-bottom:.5rem">优<span style="color:var(--gold)">炙</span></div>
+  <div style="font-size:.65rem;color:var(--text-dim);letter-spacing:.12em;margin-bottom:1.5rem">YOUZHI BRAND VI SYSTEM · V1.0 · 2026</div>
+  <a href="../index.html">← 返回品牌首页</a>
+</footer>
+
+<a href="#" class="back-top" title="回到顶部" id="backTop">⌃</a>
+
+<script>
+// Back to top visibility
+const bt=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{
+  bt.classList.toggle('visible',window.scrollY>400);
+  const hint=document.querySelector('.scroll-hint');
+  if(hint&&window.scrollY>100)hint.style.opacity='0';
+  else if(hint)hint.style.opacity='';
+});
+
+// Smooth scroll
+bt.addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+</body>
+</html>

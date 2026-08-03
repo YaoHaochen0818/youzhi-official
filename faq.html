@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>帮助中心 — 优炙 YOUZHI</title>
+<meta name="description" content="优炙 YOUZHI 常见问题 — 产品选择、喂养建议、购买渠道、退换政策、品牌信任。25个问题一站式解答。">
+<meta property="og:title" content="优炙 YOUZHI | 帮助中心">
+<meta property="og:description" content="产品选择、喂养建议、购买渠道、退换政策 — 你想知道的都在这里。">
+<meta property="og:image" content="assets/logo.jpg">
+<link rel="icon" type="image/svg+xml" href="vi/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A96E; --gold-light: #E8D5A3; --gold-dim: rgba(201,169,110,0.10);
+  --bg: #08080C; --bg-card: #0E0E14; --border: rgba(255,255,255,0.06);
+  --text: #FFFFFF; --text-soft: rgba(255,255,255,0.55); --text-dim: rgba(255,255,255,0.30);
+  --font-sans: 'Noto Serif SC', serif; --font-serif: 'Noto Serif SC', serif;
+  --font-display: 'Cormorant Garamond', serif; --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:1.1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(8,8,12,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+nav .logo{font-family:var(--font-serif);font-size:1.25rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:.06em}
+nav .logo .gold{color:var(--gold)}
+nav .links{display:flex;list-style:none;gap:2rem;align-items:center}
+nav .links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;transition:color .3s;font-weight:400}
+nav .links a:hover{color:#fff}
+
+/* Hero */
+.faq-hero{
+  min-height:40vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:8rem 2rem 4rem;
+  background:radial-gradient(ellipse at 50% 40%,rgba(201,169,110,.06),transparent 70%);
+}
+.faq-hero .eyebrow{font-size:.56rem;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem}
+.faq-hero h1{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700}
+.faq-hero .gold{color:var(--gold)}
+.faq-hero .sub{color:var(--text-soft);font-size:.85rem;margin-top:1rem;max-width:500px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-decoration:none;border-radius:2px;transition:all .35s;cursor:pointer;font-family:var(--font-sans)}
+.btn-gold{background:var(--gold);color:#000;border:none}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,169,110,.18)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.14)}
+.btn-ghost:hover{border-color:rgba(255,255,255,.4);transform:translateY(-2px)}
+
+/* Search */
+.search-wrap{display:flex;justify-content:center;padding:0 2rem 1.5rem}
+.search-box{max-width:480px;width:100%;position:relative}
+.search-box svg{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-dim);pointer-events:none}
+.search-box input{
+  width:100%;padding:.85rem 1.2rem .85rem 2.8rem;
+  background:var(--bg-card);border:1px solid var(--border);border-radius:100px;
+  color:#fff;font-family:var(--font-sans);font-size:.78rem;outline:none;
+  transition:border-color .3s;
+}
+.search-box input:focus{border-color:var(--gold)}
+.no-results{text-align:center;color:var(--text-dim);padding:2rem;display:none}
+
+/* Categories */
+.categories{display:flex;justify-content:center;gap:.4rem;flex-wrap:wrap;padding:0 2rem 2.5rem;max-width:900px;margin:0 auto}
+.cat-btn{
+  padding:.45rem 1.1rem;font-size:.65rem;letter-spacing:.06em;
+  background:transparent;border:1px solid var(--border);border-radius:100px;
+  color:var(--text-soft);cursor:pointer;transition:all .3s;font-family:var(--font-sans);
+}
+.cat-btn:hover,.cat-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(201,169,110,.06)}
+
+/* FAQ list */
+.faq-section{max-width:900px;margin:0 auto;padding:0 2rem 6rem}
+.faq-group{margin-bottom:3rem}
+.faq-group-title{
+  font-family:var(--font-serif);font-size:1.25rem;font-weight:700;color:var(--gold);
+  margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);
+}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:first-child{border-top:1px solid var(--border)}
+.faq-q{
+  width:100%;background:none;border:none;color:#fff;
+  font-family:var(--font-sans);font-size:.88rem;font-weight:400;
+  padding:1.4rem 0;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:1.5rem;
+  transition:color .3s;
+}
+.faq-q:hover{color:var(--gold)}
+.faq-q .icon{
+  flex-shrink:0;width:26px;height:26px;
+  border:1px solid var(--border);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;color:var(--gold);transition:all .35s;
+}
+.faq-item.open .faq-q .icon{transform:rotate(45deg);border-color:var(--gold)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
+.faq-item.open .faq-a{max-height:700px}
+.faq-a .inner{color:var(--text-soft);font-size:.78rem;line-height:2;padding-bottom:1.4rem}
+
+/* CTA */
+.cta-strip{
+  text-align:center;padding:5rem 2rem;
+  background:radial-gradient(ellipse at center,rgba(201,169,110,.04),transparent);
+  border-top:1px solid var(--border);
+}
+.cta-strip h3{font-family:var(--font-serif);font-size:1.4rem;margin-bottom:1rem}
+.cta-strip p{color:var(--text-soft);font-size:.8rem;margin-bottom:2rem}
+.cta-strip .btn-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+footer{padding:3rem 2.5rem;border-top:1px solid var(--border);text-align:center;color:var(--text-dim);font-size:.65rem}
+
+@media(max-width:768px){
+  nav .links{display:none}
+  nav{padding:1rem 1.2rem}
+  .faq-hero{padding:6rem 1.2rem 3rem;min-height:30vh}
+  .faq-section{padding:0 1.2rem 4rem}
+  .categories{gap:.3rem}
+  .cat-btn{padding:.35rem .7rem;font-size:.6rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">优<span class="gold">炙</span></a>
+  <ul class="links">
+    <li><a href="index.html">← 返回首页</a></li>
+    <li><a href="index.html#products">产品</a></li>
+    <li><a href="blog.html">喂养知识</a></li>
+    <li><a href="https://www.douyin.com/search/优炙宠物食品" target="_blank" rel="noopener">抖音购买</a></li>
+  </ul>
+</nav>
+
+<section class="faq-hero">
+  <div class="eyebrow">Help Center</div>
+  <h1>常见问题<span class="gold">.</span></h1>
+  <p class="sub">关于优炙产品、喂养、购买、售后的所有问题，一站式解答。找不到答案？底部有客服微信。</p>
+</section>
+
+<div class="search-wrap">
+  <div class="search-box">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="faqSearch" placeholder="搜索问题关键词...">
+  </div>
+</div>
+<div class="no-results" id="noResults">没找到匹配的问题，试试其他关键词，或加微信 <span style="color:var(--gold)">YOUZHI_Pet</span>。</div>
+
+<div class="categories" id="categories">
+  <button class="cat-btn active" data-cat="all">全部</button>
+  <button class="cat-btn" data-cat="product">产品</button>
+  <button class="cat-btn" data-cat="feeding">喂养</button>
+  <button class="cat-btn" data-cat="order">购买</button>
+  <button class="cat-btn" data-cat="after">售后</button>
+  <button class="cat-btn" data-cat="brand">品牌</button>
+</div>
+
+<div class="faq-section" id="faqContainer">
+
+  <!-- 产品 -->
+  <div class="faq-group" data-cat="product">
+    <h3 class="faq-group-title">产品相关</h3>
+
+    <div class="faq-item" data-keywords="不同 区别 优势 特点 不一样">
+      <button class="faq-q"><span>优炙和其他猫罐头，到底不一样在哪？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        市面大多数猫罐头是"肉泥+水+胶"，配料表前三位可能有肉，后面全是填充物。优炙不是。我们花了最多时间在看不见的地方：<strong>配方研发</strong>。<br>
+        · <strong>鸡骨蛋白胨</strong>：定向酶解技术把蛋白质切成小分子肽，猫咪肠胃不用费劲消化，实测消化率突破 95%。这不是"加进去就有"的成分，是需要生物酶解工艺才能做出来的；<br>
+        · <strong>A2β-酪蛋白</strong>：零乳糖的奶蛋白，幼猫和肠胃敏感的猫也能安心吃，不会像普通牛奶一样拉肚子；<br>
+        · <strong>鲜乳鸽</strong>：18-20天龄，蛋白质比普通鸡肉高30%，中医里一直是滋补食材，对术后和体弱猫尤其友好。<br>
+        加上打死不加防腐剂、诱食剂、胶质。说实话，这样做成本高、工序多，但<strong>给猫吃的东西，本来就应该这样</strong>。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="系列 怎么选 哪个 适合 选择 区别 眼花缭乱">
+      <button class="faq-q"><span>六个系列眼花缭乱，我家猫到底吃哪个？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        不用看完六个，看你的猫属于哪种：<br>
+        · <strong>肠胃弱、容易软便拉稀</strong> → 陆韵悠食鸡。单一鸡肉源，低敏配方，鸡骨蛋白胨护肠胃。入门款，适合大多数猫。<br>
+        · <strong>毛干枯、掉毛多</strong> → 海韵深海鲔。D-生物素+亚麻籽粉+Omega-3，2-4周你能摸出区别。<br>
+        · <strong>刚做完手术、体弱偏瘦、老猫</strong> → 空韵云境鸽。鲜乳鸽滋补，蛋白高热量足。<br>
+        · <strong>刚断奶的小猫、牙口差的老年猫</strong> → 肉蛋奶三重奶昔。慕斯质地不用嚼。<br>
+        · <strong>尿闭过、泌尿系统复发风险</strong> → 熔岩蔓越莓流心。蔓越莓原花青素+蒲公英，流心还能骗猫多喝水。<br>
+        · <strong>想奖励主子、互动投喂</strong> → 鸡丝三文鱼零食。看得见的真肉丝，不是肉泥压出来的假丝。<br>
+        拿不准的话，先买 12.9 元 3 罐试吃装，三种口味各一罐，让猫自己选。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="主食罐 零食罐 区别 每天喂 全价 营养">
+      <button class="faq-q"><span>主食罐和零食罐有什么区别？可以每天喂吗？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        主食罐是营养完整的猫咪主粮，粗蛋白 ≥52%，牛磺酸和钙磷比都配好了，一罐就是一餐。可以顿顿吃。<br>
+        零食罐（鸡丝三文鱼）营养结构不同，粗蛋白约 28%，更像"补给和奖励"，每天不超过日摄入量的 15%。<br>
+        <strong>主食罐 = 饭，零食罐 = 甜点。</strong>饭可以顿顿吃，甜点偶尔吃。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="成分 原料 配方 含肉量 肉源 来源">
+      <button class="faq-q"><span>罐头的成分和原料来源是什么？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        所有优炙主食罐含肉量 ≥85%（湿物质基础）：<br>
+        · 鲜鸡肉：山东白羽鸡，屠宰后24小时内入罐；<br>
+        · 金枪鱼：远洋捕捞，船冻锁鲜；<br>
+        · 鲜乳鸽：18-20天龄，定点养殖场直供；<br>
+        · 羊奶粉：全脂羊乳喷雾干燥，零添加；<br>
+        · 功能性成分（蔓越莓、蒲公英、亚麻籽等）：食品级原料，人食同源。<br>
+        不碰来路不明的肉粉、骨粉、动物副产品。每批原料有检疫证，成品有内部质检。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="保质期 多久 新鲜 生产日期">
+      <button class="faq-q"><span>罐头保质期多久？新鲜吗？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        优炙罐头<strong>保质期 24 个月</strong>。每罐底部印有生产日期。24个月靠的是<strong>121°C 高温物理灭菌 + 真空密封</strong>——不加化学防腐剂。<br>
+        只要罐体没有鼓胀、凹陷、漏气，即使临近保质期，内容物质量也不受影响。<br>
+        我们采用小批量快速周转——仓库里的罐头通常在出厂后 30 天内发出，你拿到手的大概率是最近 1-2 个月内生产的。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="肉蛋奶 流心 奶昔 慕斯 质地 特别">
+      <button class="faq-q"><span>肉蛋奶奶昔罐和流心罐有什么特别之处？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        <strong>肉蛋奶三重奶昔罐</strong>：鲜鸡胸肉 + 全脂羊奶粉 + 鸡蛋，三重蛋白协同。慕斯质地绵密细腻，猫咪舔食毫不费力。专为离乳幼猫和牙口不好的老年猫设计。零乳糖，不会腹泻。<br>
+        <strong>熔岩蔓越莓流心罐</strong>：外层扎实肉泥 + 中心流心蔓越莓酱，双重质地挑嘴猫也难以抗拒。蔓越莓原花青素 + 蒲公英 + 白茅根，温和呵护泌尿道。特别适合不爱喝水的猫——流心含水量高，补水于无形。
+      </div></div>
+    </div>
+  </div>
+
+  <!-- 喂养 -->
+  <div class="faq-group" data-cat="feeding">
+    <h3 class="faq-group-title">喂养建议</h3>
+
+    <div class="faq-item" data-keywords="挑食 不吃 换粮 适应 换了七八个牌子">
+      <button class="faq-q"><span>我的猫挑得很，换了七八个牌子都不吃怎么办？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        挑嘴猫是每个铲屎官的必修课，但我们有办法：<br>
+        1. <strong>别突然换，用七天换粮法。</strong>第一天旧粮75%+优炙25%，每天多换一点，到第七天全换完。<br>
+        2. <strong>微波炉中火10-15秒。</strong>温热到体温（别烫），肉香释放更充分。野外的猎物是温的——猫知道。<br>
+        3. <strong>抹在干粮上。</strong>干粮上瘾型猫咪，把罐头肉泥薄薄抹一层在干粮表面。<br>
+        4. <strong>终极武器：流心罐。</strong>熔岩蔓越莓流心的双重质地，我们内部测试里连试过七八个牌子都拒食的猫都愿意舔。<br>
+        如果真的一口不吃——没关系，我们有无忧退货。不想赚猫不吃的钱。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="每天 几罐 喂多少 量 食量 体重 猫咪">
+      <button class="faq-q"><span>每天应该喂多少？不同体重的猫怎么喂？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        以主食罐（85g/罐）为参考：<br>
+        · <strong>2kg</strong>：每天 1-1.5 罐，分 2-3 次；<br>
+        · <strong>4kg</strong>：每天 2-2.5 罐，分 2-3 次；<br>
+        · <strong>6kg</strong>：每天 3-3.5 罐，分 3-4 次；<br>
+        · <strong>幼猫（离乳后）</strong>：按体重 2-3 倍计算，分 3-4 次；<br>
+        · <strong>老年猫/活动量低</strong>：标准量的 80%，避免肥胖。<br>
+        以上是参考值。实际量根据猫咪活动量、体型、健康状况微调。保持能摸到肋骨但不明显，就是健康体态。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="开封 保存 冷藏 冰箱 剩 吃不完">
+      <button class="faq-q"><span>罐头开封后怎么保存？能放多久？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        一罐 85g 建议一次性吃完。如果一次吃不完：<br>
+        1. 保鲜盖封好，冰箱冷藏（4°C 以下）；<br>
+        2. 最多保存 <strong>48 小时</strong>，取出后微波 15-20 秒回温；<br>
+        3. 室温别超过 <strong>2 小时</strong>，夏天更要快；<br>
+        4. 留在原罐里，别倒进塑料盒——减少接触空气；<br>
+        5. 冷藏过的罐头一定回温，冷冰冰的猫不爱吃。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="干粮 湿粮 一起吃 混合 搭配">
+      <button class="faq-q"><span>可以和干粮一起喂吗？干湿混合好不好？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        <strong>可以，而且推荐干湿搭配。</strong><br>
+        · 干粮：热量密度高，自由采食，有助牙齿机械摩擦；<br>
+        · 湿粮（罐头）：含水量约78%，帮猫咪补水，减轻肾脏负担。<br>
+        推荐：<strong>早上干粮自由采食 + 晚上一罐主食罐</strong>。猫咪天生不爱喝水，湿粮是最自然的补水方式。<br>
+        干湿混在同一顿喂也可以，但别提前拌好放太久——湿粮会让干粮变软容易变质。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="幼猫 离乳 小猫 断奶 几个月 多大">
+      <button class="faq-q"><span>幼猫多大可以开始吃优炙罐头？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        · <strong>4周龄（约1个月）</strong>：可以尝试肉蛋奶三重奶昔罐——慕斯质地接近母乳口感，离乳过渡最温和；<br>
+        · <strong>6-8周龄</strong>：逐步引入主食罐，建议从陆韵悠食鸡开始（单一肉源低敏），用温水稀释方便舔食；<br>
+        · <strong>3个月以上</strong>：可以正常喂食所有系列。<br>
+        幼猫胃小能量需求高，每天分 3-4 次少量多餐。2个月以内别喂零食罐（鸡丝三文鱼），等消化系统发育完善再试。
+      </div></div>
+    </div>
+  </div>
+
+  <!-- 购买 -->
+  <div class="faq-group" data-cat="order">
+    <h3 class="faq-group-title">下单与物流</h3>
+
+    <div class="faq-item" data-keywords="哪里买 购买 渠道 店铺 平台 在哪">
+      <button class="faq-q"><span>优炙的罐头在哪里可以买到？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        · <strong>抖音商城</strong>：搜索「优炙宠物食品」官方店铺，直接下单；<br>
+        · <strong>直播间</strong>：每天至少一场直播，现场展示产品、解答问题，下单通常有专属福利（多送几罐或优惠券）；<br>
+        · <strong>微信客服</strong>：添加 YOUZHI_Pet，直接订购和咨询。<br>
+        所有渠道同一价格体系，没有「渠道特供版」——在哪买罐头质量都一样。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="发货 多久 快递 物流 送达 几天">
+      <button class="faq-q"><span>下单后多久发货？用什么快递？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        <strong>工作日 16:00 前下单当天发出</strong>，16:00 后次日发出。周末订单周一统一发出。<br>
+        默认顺丰/京东快递，全国大部分地区 <strong>1-3 天</strong>送达。新疆、西藏、内蒙古等偏远地区可能延 1-2 天。<br>
+        发货后短信/抖音消息通知运单号，可随时追踪。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="试吃 小包装 试用 体验装 3罐 12.9">
+      <button class="faq-q"><span>有没有试吃装？不确定猫喜不喜欢怎么办？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        有。<strong>12.9 元 3 罐装</strong>（海陆空组合：鸡+金枪鱼+鸽）就是为这个设计的。三罐三种口味，够试吃 3-6 顿。如果猫咪确实不吃（很少见），按售后政策申请退款。<br>
+        建议第一次先买 3 罐装试吃，猫喜欢再囤大包装——既省钱又不浪费。不怕你试，就怕你不试。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="价格 多少钱 定价 套餐 组合 便宜">
+      <button class="faq-q"><span>产品定价和套餐是什么？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        · <strong>3 罐装（试吃装）</strong>：¥12.9 — 海陆空三味，新人首选<br>
+        · <strong>6 罐装（过渡装）</strong>：¥29.9 — 可混搭口味，老客复购<br>
+        · <strong>12 罐装（家庭装）</strong>：¥79-108 — 单口味，性价比之选<br>
+        · <strong>24 罐装（囤货装）</strong>：¥139-204 — 多猫家庭/老客<br>
+        · <strong>48 罐装（超值装）</strong>：¥240-384 — 最大力度优惠<br>
+        买的越多越划算，大包装单罐比试吃装便宜 30%-50%。具体以抖音商城实时价格为准。
+      </div></div>
+    </div>
+  </div>
+
+  <!-- 售后 -->
+  <div class="faq-group" data-cat="after">
+    <h3 class="faq-group-title">售后与退换</h3>
+
+    <div class="faq-item" data-keywords="退 退钱 退款 退货 退换 不吃 买多">
+      <button class="faq-q"><span>买多了/猫不吃可以退吗？退款政策是什么？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        「<strong>安心试吃</strong>」保障：<br>
+        · <strong>未开封</strong>：7 天无理由退货（包装完好，退回运费自理）；<br>
+        · <strong>已开封·猫不吃</strong>：每单可退已开封中猫咪不吃的那几罐（不超已购罐数 30%），联系客服申请，按实付折算；<br>
+        · <strong>破损/漏罐/发错货</strong>：拍照联系客服，核实后免费补发或全额退款；<br>
+        · <strong>到账时间</strong>：审核通过后 1-3 个工作日退回原支付方式。<br>
+        我们不想赚"猫不吃"的钱。罐头再好也不可能讨所有猫的欢心，这个风险我们承担。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="破损 漏罐 运输 坏了 摔 快递">
+      <button class="faq-q"><span>收到罐头破损或漏罐怎么办？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        1. <strong>当场验货</strong>：快递员送货时检查外包装，明显破损可拒收；<br>
+        2. <strong>拍照留证</strong>：拍下破损罐头、外包装箱、快递面单三张照片；<br>
+        3. <strong>联系客服</strong>：微信 YOUZHI_Pet 或抖音店铺客服；<br>
+        4. <strong>我们处理</strong>：核实后<strong>免费补发</strong>，不用退回破损商品。<br>
+        纸盒外包装经过抗压测试，正常运输不应该破。破了就是我们的问题，你不需要担任何损失。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="过敏 拉肚子 软便 不良反应 吃了 腹泻">
+      <button class="faq-q"><span>猫咪吃了拉肚子/过敏怎么办？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        先不用慌：<br>
+        <strong>换粮期软便</strong>（最常见）：从旧粮突然切到高蛋白罐头，肠胃需要适应。一般 3-5 天恢复。放慢换粮节奏——旧粮提到 75%，每天只加 5% 新粮。<br>
+        <strong>过敏反应</strong>（罕见，伴瘙痒/脱毛/呕吐）：停喂，我们帮你排查过敏源并推荐替代系列（比如对鸡肉过敏的猫可以改吃金枪鱼或鸽肉）。<br>
+        <strong>急性腹泻/呕吐</strong>（极少见）：立即停食观察 12 小时。持续加重请及时就医——保留罐头批次号给我们跟进。<br>
+        猫的健康永远比一单生意重要。如果你的猫有特殊体质，我们愿意配合换系列或退货。
+      </div></div>
+    </div>
+  </div>
+
+  <!-- 品牌 -->
+  <div class="faq-group" data-cat="brand">
+    <h3 class="faq-group-title">品牌与信任</h3>
+
+    <div class="faq-item" data-keywords="理念 品牌故事 团队 创始人 靠谱">
+      <button class="faq-q"><span>优炙是什么品牌？团队靠谱吗？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        优炙之名，源于优越品质，成于炙热初心。一支 <strong>00 后创业团队</strong>，由创始人皓宸带领。不做完美的品牌人设，做的每一罐都经得起成分党的审视。<br>
+        供应链由工厂合伙人小鱼把控（厂二代），全链路 <strong>28 道品控节点</strong>。商标已注册。<br>
+        关注抖音和团队 vlog，看到品牌背后鲜活的日常。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="零添加 防腐剂 诱食剂 胶质 真的 怎么做">
+      <button class="faq-q"><span>"零添加"怎么做到的？高温灭菌不会破坏营养吗？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        先说真的：121°C高温灭菌确实会损失一点热敏维生素（比如B族）。但我们不是靠高温"硬杀"——我们靠的是全链路品控：原料微生物本来就低（鲜肉24小时内入罐），灭菌压力就小；真空封口后罐内无氧，细菌无法繁殖。所以不需要化学防腐剂就能24个月保质期。<br>
+        营养方面——配方设计阶段就把高温损耗算进去了，额外补充牛磺酸、维生素的初始添加量，灭菌后依然达标。这是专业宠粮工厂的基本功。<br>
+        诱食剂更简单——含肉量85%以上的罐头本身就很香。猫的嗅觉是人的14倍，真肉的氨基酸风味对它是满分级别的吸引。<br>
+        胶质——肉蛋白灭菌后自然凝结成慕斯质地，不需要卡拉胶或瓜尔胶来"假装浓郁"。<br>
+        每一批产品都有内部质检留样备查。做给自家猫吃的标准，不怕你看。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="检测 报告 安全 质检 合格">
+      <button class="faq-q"><span>产品安全怎么保证？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        安全靠的不是一份报告，是靠全链路把控：<br>
+        · 原料：每批肉源有检疫证明，进厂再做新鲜度和微生物检验；<br>
+        · 生产：金属探测 + X光异物检测 + 真空密封 + 高温灭菌参数实时监控；<br>
+        · 成品：每批留样备查，可追溯生产日期和批次号。<br>
+        产品的营养成分（粗蛋白、粗脂肪、牛磺酸等）在包装上明确标注。我们对自己产品有信心，但不会声称有第三方认证——诚实比权威更重要。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="生产 工厂 代工 品控 28道 哪里">
+      <button class="faq-q"><span>罐头在哪里生产的？品控流程是什么？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        山东临沂自有合作工厂，不是外包代工。工厂合伙人家族企业，从原料到出库 28 道品控节点：<br>
+        · 原料：每批肉源检疫证明 + 进厂质检（新鲜度、药残、微生物）；<br>
+        · 生产：金属探测 + X光异物检测 + 真空度检测 + 灭菌参数实时监控；<br>
+        · 成品：每批留样备查 + 可追溯批次号；<br>
+        · 出库：罐体外观全检 + 包装抗压测试 + 物流跟踪。<br>
+        自有工厂不是为了炫耀，是为了掌控每一个环节。品控不是成本，是底线。
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-keywords="抖音 直播 视频 vlog 关注 优惠 动态">
+      <button class="faq-q"><span>怎么关注优炙的最新动态和优惠？</span><span class="icon">+</span></button>
+      <div class="faq-a"><div class="inner">
+        · <strong>抖音</strong>：搜索「优炙宠物食品」，关注店铺 + 直播间，新人有专属福利券；<br>
+        · <strong>小红书</strong>：搜索「优炙 YOUZHI」，产品测评、喂养知识；<br>
+        · <strong>微信</strong>：添加 YOUZHI_Pet，一对一客服 + 朋友圈优惠预告；<br>
+        · <strong>团队 vlog</strong>：抖音持续更新，记录一群 00 后做猫罐头的日常。<br>
+        直播间下单通常有额外福利，建议蹲直播等优惠。
+      </div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-strip" id="contact">
+  <h3>还有问题？</h3>
+  <p>微信添加 YOUZHI_Pet，一对一解答 · 工作日 09:00-22:00 在线</p>
+  <div class="btn-row">
+    <a href="index.html" class="btn btn-ghost">返回品牌首页</a>
+    <a href="https://www.douyin.com/search/优炙宠物食品" target="_blank" rel="noopener" class="btn btn-gold">🛒 去抖音购买</a>
+  </div>
+</div>
+
+<footer>© 2026 优炙 YOUZHI. All rights reserved.</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+const catBtns = document.querySelectorAll('.cat-btn');
+const faqGroups = document.querySelectorAll('.faq-group');
+catBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    catBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    faqGroups.forEach(group => {
+      group.style.display = (cat === 'all' || group.dataset.cat === cat) ? '' : 'none';
+    });
+    document.getElementById('faqSearch').value = '';
+    document.getElementById('noResults').style.display = 'none';
+    document.querySelectorAll('.faq-item').forEach(el => el.style.display = '');
+  });
+});
+
+const searchInput = document.getElementById('faqSearch');
+const noResults = document.getElementById('noResults');
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase().trim();
+  let anyVisible = false;
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const keywords = (item.dataset.keywords || '') + ' ' + item.textContent.toLowerCase();
+    const match = !query || keywords.includes(query);
+    item.style.display = match ? '' : 'none';
+    if (match) anyVisible = true;
+  });
+  faqGroups.forEach(group => {
+    const vis = [...group.querySelectorAll('.faq-item')].filter(el => el.style.display !== 'none').length;
+    group.style.display = vis > 0 || !query ? '' : 'none';
+  });
+  noResults.style.display = (!anyVisible && query) ? '' : 'none';
+  if (query) { catBtns.forEach(b => b.classList.remove('active')); catBtns[0].classList.add('active'); }
+});
+</script>
+</body>
+</html>
