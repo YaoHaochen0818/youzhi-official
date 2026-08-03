@@ -311,11 +311,71 @@ footer .ft-bot{padding-top:2rem;margin-top:3.5rem;border-top:1px solid var(--bor
   <div class="kpi-item reveal"><div class="num">85%+</div><div class="lbl">含肉量标准</div></div>
 </div>
 
+<!-- ═══════════ BRAND STORY ═══════════ -->
+<style>
+.brand-story{padding:6rem 2.5rem;background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.brand-story .container{max-width:1100px;margin:0 auto}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.story-left .story-eyebrow{font-size:.56rem;letter-spacing:.36em;color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem}
+.story-left h3{font-family:var(--font-serif);font-size:1.3rem;font-weight:400;line-height:2;margin-bottom:2rem;color:var(--text)}
+.story-left h3 .em{color:var(--gold);font-weight:700}
+.story-left .story-body{color:var(--text-soft);font-size:.8rem;line-height:2.1}
+.story-right{display:grid;gap:1.2rem}
+.story-stat{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.8rem 1.5rem;transition:all .4s}
+.story-stat:hover{border-color:rgba(201,169,110,.2)}
+.story-stat .sv{font-family:var(--font-serif);font-size:1.5rem;font-weight:900;color:var(--gold);line-height:1}
+.story-stat .sl{font-size:.62rem;color:var(--text-dim);margin-top:.4rem;letter-spacing:.06em}
+@media(max-width:768px){
+  .brand-story{padding:4rem 1.2rem}
+  .story-grid{grid-template-columns:1fr;gap:2.5rem}
+  .story-left h3{font-size:1.15rem;line-height:1.9}
+  .story-left .story-body{font-size:.75rem}
+}
+</style>
+
+<section class="brand-story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-left reveal">
+        <div class="story-eyebrow">Our Story</div>
+        <h3>
+          优炙之名，<br>
+          源于<span class="em">优越品质</span>，<br>
+          成于<span class="em">炙热初心</span>。
+        </h3>
+        <p class="story-body">
+          我们是一群00后，在山东临沂做了一个猫罐头品牌。<br><br>
+          供应链合伙人家里世代做食品工厂——这意味着我们不是"下单代工"，
+          而是<strong>从原料入厂到成品出库，亲自守完28道品控节点</strong>。<br><br>
+          优炙不去证明自己有多特别。我们相信一件事：
+          <strong>猫不会说话，但配料表会</strong>。
+          所以每一罐的含肉量、消化率、成分来源都写在包装上，
+          每一批产品留样备查——不是因为谁要求，是因为猫没办法替你检查。
+        </p>
+      </div>
+      <div class="story-right reveal">
+        <div class="story-stat">
+          <div class="sv">自有工厂</div>
+          <div class="sl">山东临沂 · 供应链合伙人家庭产业 · 非外包代工</div>
+        </div>
+        <div class="story-stat">
+          <div class="sv">28道品控</div>
+          <div class="sl">原料检疫 → 金属探测 → X光异物 → 真空密封 → 保温试验 → 留样备查</div>
+        </div>
+        <div class="story-stat">
+          <div class="sv">配料表即信用</div>
+          <div class="sl">不堆认证做摆设 · 含肉量≥85% · 零防腐剂·零诱食剂·零胶质</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ PRODUCTS ═══════════ -->
 <section id="products">
   <div class="container">
     <div class="s-eyebrow reveal">Product Line</div>
-    <div class="s-title reveal">六大系列 <span class="gold">按龄 · 按需 · 精准匹配</span></div>
+    <div class="s-title reveal">四大系列 <span class="gold">按龄 · 按需 · 精准匹配</span></div>
     <div class="product-grid">
       <a href="product.html#haikonglu" class="product-card reveal">
         <div class="card-visual"><img src="assets/products/chicken-main.png" alt="海陆空"></div>
