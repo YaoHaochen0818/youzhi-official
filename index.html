@@ -149,14 +149,20 @@ section{padding:7rem 2.5rem}
 .s-item .count{font-family:var(--font-serif);font-size:.55rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem}
 .s-item p{color:var(--text-soft);font-size:.78rem;line-height:1.8}
 
-/* ═══════════ FEEDING TABLE ═══════════ */
-#feeding{background:var(--bg-card)}
-.feed-wrap{max-width:850px;margin:0 auto;border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.feed-wrap table{width:100%;border-collapse:collapse}
-.feed-wrap th{background:rgba(201,169,110,.03);padding:1.2rem 1.5rem;text-align:left;font-size:.62rem;font-weight:500;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;border-bottom:1px solid var(--border)}
-.feed-wrap td{padding:1.2rem 1.5rem;color:var(--text-soft);font-size:.78rem;border-bottom:1px solid var(--border)}
-.feed-wrap tr:last-child td{border-bottom:none}
-.feed-wrap tr:hover td{background:rgba(255,255,255,.01);color:#fff}
+/* ═══════════ FEEDING CARDS ═══════════ */
+#feeding{background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.feed-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;max-width:900px;margin:0 auto}
+.feed-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .4s}
+.feed-card:hover{border-color:rgba(201,169,110,.2);transform:translateY(-4px)}
+.feed-card .fc-header{padding:2rem 2rem 0;display:flex;align-items:baseline;gap:.8rem}
+.feed-card .fc-weight{font-family:var(--font-serif);font-size:3rem;font-weight:900;color:var(--gold);line-height:1}
+.feed-card .fc-label{font-size:.65rem;color:var(--text-dim);letter-spacing:.12em;text-transform:uppercase}
+.feed-card .fc-body{padding:1.5rem 2rem 2rem}
+.feed-card .fc-dose{font-size:.9rem;color:var(--text);margin-bottom:.4rem}
+.feed-card .fc-dose .fc-num{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;color:var(--gold-light)}
+.feed-card .fc-tip{font-size:.65rem;color:var(--text-dim);margin-bottom:1rem;padding:.3rem .8rem;border:1px solid var(--border);border-radius:100px;display:inline-block}
+.feed-card .fc-body p{color:var(--text-soft);font-size:.82rem;line-height:1.9}
+@media(max-width:768px){.feed-cards{grid-template-columns:1fr}}
 
 /* ═══════════ FAQ ═══════════ */
 .faq-list{max-width:800px;margin:0 auto}
@@ -481,16 +487,55 @@ footer .ft-bot{padding-top:2rem;margin-top:3.5rem;border-top:1px solid var(--bor
   <div class="container">
     <div class="s-eyebrow reveal">Feeding Guide</div>
     <div class="s-title reveal"><span class="gold">精准喂养</span> · 科学配比</div>
-    <div class="feed-wrap reveal">
-      <table>
-        <thead><tr><th>猫咪体重</th><th>主食罐 / 日</th><th>零食罐 / 日</th><th>成分适配建议</th></tr></thead>
-        <tbody>
-          <tr><td>2 kg</td><td>1 – 1.5 罐</td><td>≤ 0.5 罐</td><td>幼猫选 A2β-酪蛋白配方，离乳分 3-4 次喂食</td></tr>
-          <tr><td>4 kg</td><td>2 – 2.5 罐</td><td>≤ 1 罐</td><td>美毛需求日 1 罐美毛 + 1 罐基础款</td></tr>
-          <tr><td>6 kg</td><td>3 – 3.5 罐</td><td>≤ 1.5 罐</td><td>老年猫选低磷，搭配奶昔罐提升吸收</td></tr>
-          <tr><td>术后 / 软便</td><td>1.5 – 2 罐</td><td>暂停零食</td><td>A2β-酪蛋白 + 鸡骨蛋白胨，搭配益生菌鸽肉款</td></tr>
-        </tbody>
-      </table>
+
+    <div class="feed-cards">
+      <div class="feed-card reveal">
+        <div class="fc-header">
+          <span class="fc-weight">2 kg</span>
+          <span class="fc-label">幼猫 / 小型猫</span>
+        </div>
+        <div class="fc-body">
+          <div class="fc-dose"><span class="fc-num">1 – 1.5</span> 罐/日</div>
+          <div class="fc-tip">零食 ≤ 0.5 罐</div>
+          <p>选 A2β-酪蛋白配方，离乳幼猫分 3-4 次喂食。奶昔罐慕斯质地最友好。</p>
+        </div>
+      </div>
+
+      <div class="feed-card reveal">
+        <div class="fc-header">
+          <span class="fc-weight">4 kg</span>
+          <span class="fc-label">成年猫</span>
+        </div>
+        <div class="fc-body">
+          <div class="fc-dose"><span class="fc-num">2 – 2.5</span> 罐/日</div>
+          <div class="fc-tip">零食 ≤ 1 罐</div>
+          <p>美毛需求日 1 罐海陆空美毛款 + 1 罐基础款，混搭更均衡。</p>
+        </div>
+      </div>
+
+      <div class="feed-card reveal">
+        <div class="fc-header">
+          <span class="fc-weight">6 kg</span>
+          <span class="fc-label">大型猫 / 老年猫</span>
+        </div>
+        <div class="fc-body">
+          <div class="fc-dose"><span class="fc-num">3 – 3.5</span> 罐/日</div>
+          <div class="fc-tip">零食 ≤ 1.5 罐</div>
+          <p>老年猫选低磷配方，搭配奶昔罐提升吸收。活动量低的猫酌情减量。</p>
+        </div>
+      </div>
+
+      <div class="feed-card reveal">
+        <div class="fc-header">
+          <span class="fc-weight">术后 / 软便</span>
+          <span class="fc-label">特殊护理</span>
+        </div>
+        <div class="fc-body">
+          <div class="fc-dose"><span class="fc-num">1.5 – 2</span> 罐/日</div>
+          <div class="fc-tip">暂停零食</div>
+          <p>A2β-酪蛋白 + 鸡骨蛋白胨双核心养分，搭配益生菌鸽肉款温和调理。</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -514,6 +559,16 @@ footer .ft-bot{padding-top:2rem;margin-top:3.5rem;border-top:1px solid var(--bor
   </div>
 </section>
 
+<!-- ═══════════ BLOG CTA ═══════════ -->
+<section style="padding:3rem 2.5rem;text-align:center;border-top:1px solid var(--border);background:radial-gradient(ellipse at center,rgba(201,169,110,.04),transparent)">
+  <div style="font-size:.5rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem">Cat Nutrition Lab</div>
+  <a href="blog.html" style="display:block;text-decoration:none;color:var(--text);transition:all .3s">
+    <h3 style="font-family:var(--font-serif);font-size:1.6rem;font-weight:700;margin-bottom:.8rem">猫咪喂养知识百科</h3>
+    <p style="color:var(--text-soft);font-size:.82rem;line-height:2;max-width:600px;margin:0 auto 1.5rem">8篇干货文章：换粮指南 · 掉毛原因 · 幼猫护理 · 骗水攻略 · 术后恢复 · 零添加科普 · 干湿搭配 · 消化率解析</p>
+    <span style="display:inline-block;padding:.7rem 2rem;border:1px solid var(--gold);border-radius:2px;color:var(--gold);font-size:.7rem;letter-spacing:.12em;transition:all .3s">浏览全部文章 →</span>
+  </a>
+</section>
+
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer id="contact">
   <div class="ft-grid">
@@ -523,8 +578,7 @@ footer .ft-bot{padding-top:2rem;margin-top:3.5rem;border-top:1px solid var(--bor
     </div>
     <div>
       <h4>产品系列</h4>
-      <ul><li><a href="product.html#haikonglu">初心系列 — 海陆空主食</a></li><li><a href="product.html#roudannai">臻选系列 — 肉蛋奶软食</a></li><li><a href="product.html#liuxin">炙爱系列 — 蔓越莓流心</a></li><li><a href="product.html#jisi">海陆交响 — 鸡丝三文鱼</a></li><li><a href="blog.html">📖 喂养知识百科</a></li></ul>
-    </div>
+      <ul><li><a href="product.html#haikonglu">初心系列 — 海陆空主食</a></li><li><a href="product.html#roudannai">臻选系列 — 肉蛋奶软食</a></li><li><a href="product.html#liuxin">炙爱系列 — 蔓越莓流心</a></li><li><a href="product.html#jisi">海陆交响 — 鸡丝三文鱼</a></li></ul>
     <div>
       <h4>找到我们</h4>
       <ul>
