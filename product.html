@@ -153,6 +153,16 @@ footer{padding:3rem;border-top:1px solid var(--border);text-align:center;color:v
 
 <script>
 const products={
+  hunhezhuang:{
+    name:'六味混合试吃装',series:'新客尝鲜 · 6味×1罐',
+    subtitle:'海陆空+肉蛋奶+蔓越莓流心+鸡丝三文鱼，六个口味各一罐。不知道猫喜欢什么？让它自己选。试完喜欢哪个，再囤哪个。',
+    highlights:['六味各一罐 · 一次全试','¥36.9/6罐 · 新客首选','自己打包 · 混装发货','猫不吃？无忧退货'],
+    tags:['海陆空×1','肉蛋奶×1','蔓越莓流心×1','鸡丝三文鱼×1','每种口味都尝到'],
+    nutrition:{'单罐':'85g','口味数':'6种','定价':'¥36.9','单罐约':'¥6.15'},
+    feeding:[{v:'6罐',l:'六个口味'},{v:'¥36.9',l:'试吃价'},{v:'≈¥6.15',l:'单罐均价'}],
+    gallery:['details/chicken/鸡肉.png','details/tuna/鱼肉.png','details/pigeon/鸽肉.png','details/shake/肉蛋奶.png','details/lava/流心.png','details/snack/鸡丝.png'],
+    image:'assets/products/chicken-main.png'
+  },
   haikonglu:{
     name:'初心·海陆空盛筵',series:'初心系列 · 全价主食',
     subtitle:'鸡+金枪鱼+鲜乳鸽三味混搭，全价主食慕斯肉丝罐。鸡骨蛋白胨小分子肽，消化率≥95%。一箱尝遍海陆空，送试吃降低试错成本。',
@@ -212,7 +222,7 @@ function loadProduct(hash){
   document.getElementById('relatedGrid').innerHTML=others.map(([k,v])=>`<a href="product.html#${k}" class="r-card"><img src="${v.image}" alt="${v.name}"><div class="rc-info"><div class="rc-series">${v.series}</div><div class="rc-name">${v.name}</div></div></a>`).join('');
 
   const qn=document.getElementById('quickNav');
-  const short={haikonglu:'海陆空',roudannai:'肉蛋奶',liuxin:'蔓越莓',jisi:'鸡丝'};
+  const short={hunhezhuang:'混合装',haikonglu:'海陆空',roudannai:'肉蛋奶',liuxin:'蔓越莓',jisi:'鸡丝'};
   qn.innerHTML=`<a href="index.html" class="qn-back">← 首页</a>${Object.entries(short).map(([k,v])=>`<a href="product.html#${k}" class="qn-pill${k===hash?' active':''}">${v}</a>`).join('')}`;
 }
 
